@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 sphinx = "*"
 recommonmark = "*"
+doc8 = "*"
+mkdocs = "*"
 
 [dev-packages]
 
