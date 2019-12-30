@@ -4,9 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-sphinx = "*"
+Sphinx = "*"
 recommonmark = "*"
-doc8 = "*"
 mkdocs = "*"
 
 [dev-packages]
