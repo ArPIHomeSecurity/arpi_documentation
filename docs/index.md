@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Home
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+ArPI - Home Security System
 
-## Commands
+The documentation of the ArPI - Home Security System a Raspberry PI based home security system mainpanel replcament.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+## Goal of the project
 
-## Project layout
+By replacing the mainboard of an old home security system have an easily manageable system.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## What will you need
+
+1. A deployed old security system with sensors
+2. Raspberry PI Zero W
+3. ArPI board
