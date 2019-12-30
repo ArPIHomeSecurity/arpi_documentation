@@ -1,1 +1,7 @@
-What security engineers should know
+# Installation manual
+
+## Replace mainboard
+
+## Resistors and sensors
+
+## Configuration

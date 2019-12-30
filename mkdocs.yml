@@ -1,1 +1,10 @@
 site_name: ArPI - Home Security System
+theme:
+    name: readthedocs
+
+nav:
+    - 'Home': 'index.md'
+    - 'End user': 'end_users/index.md'
+    - 'Security Engineers': 'security_engineers/index.md'
+    - 'Developers': 'developers/index.md'
+    - 'About': 'about.md'

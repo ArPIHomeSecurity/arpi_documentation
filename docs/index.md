@@ -1,12 +1,15 @@
-# Home
+# ArPI - Home Security System
 
-ArPI - Home Security System
-
-The documentation of the ArPI - Home Security System a Raspberry PI based home security system mainpanel replcament.
+ArPI is a Raspberry PI based home security system.
 
 ## Goal of the project
 
-By replacing the mainboard of an old home security system have an easily manageable system.
+By replacing the mainboard of an old home security system have an easily manageable smart system.
+
+* Reuse wiring, sensors and keyboards of the security system
+* Accessing the system on local network or remotely on the web
+* Graphical interface for using and managing the security system
+* Email and SMS notifications
 
 ## What will you need
 
