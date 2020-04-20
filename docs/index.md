@@ -16,3 +16,17 @@ By replacing the mainboard of an old home security system have an easily managea
 1. A deployed old security system with sensors
 2. Raspberry PI Zero W
 3. ArPI board
+
+## Getting the code
+
+Checkout the main project with the submodules:
+
+```bash
+git clone --recurse-submodules https://github.com/ArPIHomeSecurity/arpi_management.git
+```
+
+```
++ arpi_management: deploying the software components
+|--arpi_server: backend
+|--arpi_webapplication: frontend
+```
