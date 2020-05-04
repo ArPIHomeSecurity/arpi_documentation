@@ -1,14 +1,64 @@
 # Developers help
 
-## Running in demo mode
+## Getting the code
 
-## Running on PC
+git clone --recursive ...
+
+## Running in different modes
+
+Goal of the different modes
+
+1. Demo production
+2. Demo development
+3. Development
+4. Production
+
+### Running in demo production mode
+
+Start the web application in demo mode
+
+### Running in demo development mode
+
+Start the web application in demo mode
+
+### Running on PC in development mode
+
+Start the web application in demo mode
+
+### Running in demo development mode
+
+Start the system in development mode
 
 ## Running on Raspberry
 
-## Installing the code from source
+Start the system in production mode
 
-## Installing from image
+## Installation
+
+The different installation modes
+1. From source
+2. From image
+
+### Installing the code from source
+
+1. Download Rasbian
+2. Use Etcher to write to a card
+3. Configure wifi to access the host
+4. Connect to the host
+5. Resize the card
+6. Update and upgrade Raspbian
+7. Configure the installation
+8. Install the environment
+9. Install the components
+10. Get registration code
+
+
+### Installing from image
+
+1. Download the image
+2. Write to a card
+3. Configure wifi
+4. Get registration code
 
 ## Translations
 
