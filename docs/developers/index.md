@@ -2,7 +2,18 @@
 
 ## Getting the code
 
-git clone --recursive ...
+Open a terminal, navigate into your working directory and run the following command:
+```bash
+git clone --recurse-submodules https://github.com/ArPIHomeSecurity/arpi_management.git
+```
+This command will download the source code of management project of
+the ArPI Home security system with the server and the webapplication components.
+
+```
++ arpi_management: managing the software components
+|--arpi_server: backend
+|--arpi_webapplication: frontend
+```
 
 ## Running in different modes
 
@@ -41,17 +52,60 @@ The different installation modes
 
 ### Installing the code from source
 
-1. Download Rasbian
-2. Use Etcher to write to a card
-3. Configure wifi to access the host
-4. Connect to the host
-5. Resize the card
-6. Update and upgrade Raspbian
-7. Configure the installation
-8. Install the environment
-9. Install the components
-10. Get registration code
+#### Prepare the SD card for installing ArPI
 
+1. Download [Raspberry PI OS](https://www.raspberrypi.org/downloads/raspbian/) without desktop
+2. Use [Etcher](https://www.balena.io/etcher/) to write to a card
+3. Configure wifi to access the host ([docs](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md))
+    1. Generate WIFI passphrase
+
+            wpa_passphrase <ssid> [passphrase]
+
+    2. Append the output to the file "/rootfs/etc/wpa_supplicant/wpa_supplicant.conf"
+
+4. Enable ssh connections: create a file with name "ssh" in the /boot
+5. Insert the card, start the Raspberry PI and connect to the host
+
+        ssh pi@raspberrypi.local
+
+6. Configure some general settings with "raspi-config" and reboot
+    1. Locale
+    2. Keyboard
+    3. Timezone
+    4. Enable serial
+    5. Expand filesystem
+7. Update and upgrade Raspbian
+
+        sudo apt update
+        sudo apt upgrade
+
+
+#### Install ArPI to the prepared system
+
+Before installing the ArPI to a running Raspberry PI system [get the code](#getting-the-code)!
+
+1. Start the Raspberry PI Zero with the prepared SD card
+2. Check the installation configuration file: install.yaml
+3. Install the ArPI components with the management project from your development host (not the raspi)
+
+        # activate the python virtual environment
+        pipenv shell
+        # install the prerequisites
+        ./install.py environment
+        ./install.py server
+        # build the production webapplication before install
+        ./install.py webaplication
+        ./install.py database
+
+4. Enable the services
+
+        # after login to your raspi
+        sudo systemctl enable argus_server argus_monitor nginx
+        sudo systemctl start argus_server argus_monitor
+        # wait some seconds
+        sudo systemctl start nginx
+
+5. You can access the web application
 
 ### Installing from image
 
