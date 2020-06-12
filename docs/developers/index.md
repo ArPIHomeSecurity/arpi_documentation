@@ -121,3 +121,8 @@ Before installing the ArPI to a running Raspberry PI system [get the code](#gett
 The software is configured to use a DS1307 hardware clock. The configuration is prepared during the installation of the board (arpi_management/scripts/install_environment.sh).
 
 The hardware clock is updated every hour from system clock and updates the system clock on reboot (arpi_management/arpi_server/etc/cron/hwclock).
+
+## GSM module
+
+The software is configured to work with a GSM module (tested with SIM900A) on serial port /dev/ttyAMA0 9600 Baud.
+The console on serial port is disabled.
