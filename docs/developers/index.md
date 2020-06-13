@@ -1,6 +1,4 @@
-# Developers help
-
-## Getting the code
+# Getting the code
 
 Open a terminal, navigate into your working directory and run the following command:
 ```bash
@@ -15,44 +13,110 @@ the ArPI Home security system with the server and the webapplication components.
 |--arpi_webapplication: frontend
 ```
 
-## Running in different modes
+# The web application
+
+The user interface of the security system is implemented in angular. This web application
+can be used in different modes.
 
 Goal of the different modes
 
-1. Demo production
-2. Demo development
-3. Development
-4. Production
+1. Demo production: running on Github pages with mock REST API
+2. Demo development: running locally with mock REST API
+3. Development: running locally with backend service using mock adapters
+4. Production: running on Raspberry PI
 
-### Running in demo production mode
+## Running in demo production mode
 
-Start the web application in demo mode
+This mode is for running the web application in demo mode on Github pages with
+a mock REST API.
 
-### Running in demo development mode
+```bash
+# setting the environment
+export DIST=dist-demo
+# building the application
+ng build --configuration=demo --localize
+# move default language to the root of the output folder
+npm run postbuild
+# start serving the web application on http://localhost:4200
+npm run serve
+```
 
-Start the web application in demo mode
+## Running in demo development mode
 
-### Running on PC in development mode
+This mode is for running the web application in demo development mode locally with
+a mock REST API.
 
-Start the web application in demo mode
+```bash
+# setting the environment
+export DIST=dist-demo-dev
+# building the application
+ng build --configuration=demo-dev --localize
+# move default language to the root of the output folder
+npm run postbuild
+# start serving the web application on http://localhost:4200
+npm run serve
+```
 
-### Running in demo development mode
+## Building for development mode
 
-Start the system in development mode
+This mode is for running the web application in development mode with
+the backend services locally. The backend services are using the mock adapters
+instead of the real adapters.
 
-## Running on Raspberry
+1. Build the web application
 
-Start the system in production mode
+```bash
+# setting the environment
+export DIST=dist-development
+# building the application
+ng build --localize
+# move default language to the root of the output folder
+npm run postbuild
+```
 
-## Installation
+2. Start the backend services
+
+```bash
+# go the server folder
+cd server
+# start the REST API (it also serves the web application)
+./scripts/start_server.sh dev
+# start the monitoring service
+./scripts/start_monitor.sh dev
+```
+
+
+## Building for production
+
+```bash
+# setting the environment
+export DIST=dist-production
+# building the application
+ng build --configuration=production --localize
+# move default language to the root of the output folder
+npm run postbuild
+```
+
+# The backend services
+
+The backend system has two major components:
+
+1. The server provides the REST API to communicate with the web application
+2. The monitor implements the main functionality (IO handling, RTC, GSM...)
+
+## The server
+
+## The monitor
+
+# Installation
 
 The different installation modes
 1. From source
 2. From image
 
-### Installing the code from source
+## Installing the code from source
 
-#### Prepare the SD card for installing ArPI
+### Prepare the SD card for installing ArPI
 
 1. Download [Raspberry PI OS](https://www.raspberrypi.org/downloads/raspbian/) without desktop
 2. Use [Etcher](https://www.balena.io/etcher/) to write to a card
@@ -80,13 +144,13 @@ The different installation modes
         sudo apt upgrade
 
 
-#### Install ArPI to the prepared system
+### Install ArPI to the prepared system
 
 Before installing the ArPI to a running Raspberry PI system [get the code](#getting-the-code)!
 
 1. Start the Raspberry PI Zero with the prepared SD card
 2. Check the installation configuration file: install.yaml
-3. Install the ArPI components with the management project from your development host (not the raspi)
+3. Install the ArPI components with the management project from your development host (not the raspi). Before this step you will need to [build the web application for production mode](#building-for-production)!
 
         # activate the python virtual environment
         pipenv shell
@@ -114,15 +178,15 @@ Before installing the ArPI to a running Raspberry PI system [get the code](#gett
 3. Configure wifi
 4. Get registration code
 
-## Translations
+# Translations
 
-## Hardware clock
+# Hardware clock
 
 The software is configured to use a DS1307 hardware clock. The configuration is prepared during the installation of the board (arpi_management/scripts/install_environment.sh).
 
 The hardware clock is updated every hour from system clock and updates the system clock on reboot (arpi_management/arpi_server/etc/cron/hwclock).
 
-## GSM module
+# GSM module
 
 The software is configured to work with a GSM module (tested with SIM900A) on serial port /dev/ttyAMA0 9600 Baud.
 The console on serial port is disabled.
