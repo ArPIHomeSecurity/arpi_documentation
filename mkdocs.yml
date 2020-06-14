@@ -1,6 +1,7 @@
 site_name: ArPI - Home Security System
 site_url: https://www.arpi-security.info
 site_description: Documentation for the ArPI Home Security System
+site_author: Gábor Kovács
 copyright: Copyright © 2020 - ArPI Home Security
 
 repo_name: ArPI - documentation
@@ -31,7 +32,7 @@ nav:
     - Security Engineers:
         - Security Engineers: security_engineers/index.md
     - Developers: 
-        - Developers: developers/index.md
+        - Overview: developers/index.md
         - Installation: developers/installation.md
         - Web application: developers/web_application.md
         - Backend: developers/backend.md

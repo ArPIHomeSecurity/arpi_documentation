@@ -1,11 +1,16 @@
-The backend system has two major components:
+The backend system has three major components:
 
 1. The server provides the REST API to communicate with the web application
 2. The monitor implements the main functionality (IO handling, RTC, GSM...)
+3. Postgres database for storing persistent information
 
-## The server
+## Local development
 
-## The monitor
+![local development](images/local_development.svg)
+
+## Production architecture
+
+![production](images/production.svg)
 
 ## Preparing the database for development
 

@@ -1,5 +1,3 @@
-# Developers
-
 Help for developers/contributors.
 
 ## Getting the code
