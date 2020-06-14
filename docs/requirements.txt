@@ -9,9 +9,10 @@ idna==2.8
 imagesize==1.2.0
 jinja2==2.10.3
 livereload==2.6.1
-markdown==3.1.1
+markdown==3.2.1
 markupsafe==1.1.1
-mkdocs==1.0.4
+mkdocs==1.1
+mkdocs-material==5.2.3
 packaging==19.2
 pygments==2.5.2
 pyparsing==2.4.6

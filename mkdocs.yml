@@ -1,6 +1,12 @@
 site_name: ArPI - Home Security System
 theme:
-    name: readthedocs
+    name: material
+markdown_extensions:
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true
 
 nav:
     - 'Home': 'index.md'
