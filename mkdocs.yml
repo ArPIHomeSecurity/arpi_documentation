@@ -1,16 +1,39 @@
 site_name: ArPI - Home Security System
+site_url: https://www.arpi-security.info
+site_description: Documentation for the ArPI Home Security System
+copyright: Copyright © 2020 - ArPI Home Security
+
+repo_name: ArPI - documentation
+repo_url: https://github.com/ArPIHomeSecurity/arpi_documentation
+
 theme:
     name: material
+    features:
+        - tabs
+    logo: assets/argus-eye-30.png
+    favicon: assets/argus-eye-16.png
+    palette:
+        primary: indigo
+        accent: orange
+
 markdown_extensions:
     - admonition
     - codehilite:
         guess_lang: false
     - toc:
         permalink: true
+    - footnotes
 
 nav:
-    - 'Home': 'index.md'
-    - 'End user': 'end_users/index.md'
-    - 'Security Engineers': 'security_engineers/index.md'
-    - 'Developers': 'developers/index.md'
-    - 'About': 'about.md'
+    - Home: index.md
+    - End user: 
+        - End user: end_users/index.md
+    - Security Engineers:
+        - Security Engineers: security_engineers/index.md
+    - Developers: 
+        - Developers: developers/index.md
+        - Installation: developers/installation.md
+        - Web application: developers/web_application.md
+        - Backend: developers/backend.md
+    - About:
+        About: about.md
