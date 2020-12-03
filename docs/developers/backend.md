@@ -35,7 +35,7 @@ You can run the backend services in development mode locally with mock adapters.
 # go the server folder
 cd server
 # start the database
-./scripts/start_server.sh dev
+./scripts/start_database.sh dev
 # start the REST API (it also serves the web application)
 ./scripts/start_server.sh dev
 # start the monitoring service
