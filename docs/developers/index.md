@@ -18,9 +18,23 @@ the ArPI Home security system with the server and the webapplication components.
 ## Prequisities
 
 * python 3
-* python virtualenv / pipenv
-* nodejs
-* docker
+* python virtualenv / pipenv (for management and server)
+* nodejs (for the webapplication)
+* docker (for server)
+
+Preparing environments:
+* Prepare virtualenv
+    ```bash
+    virtualenv -p /usr/bin/python3 pyenv
+    ```
+* Prepare pipenv
+    ```bash
+    pipenv install
+    ```
+* Prepare node modules
+    ```bash
+    npm install
+    ```
 
 ## Features
 
