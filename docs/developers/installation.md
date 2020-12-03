@@ -18,8 +18,8 @@
 
 ### Prepare the SD card
 
-1. Download [Raspberry PI OS](https://www.raspberrypi.org/downloads/raspbian/) without desktop
-2. Use [Etcher](https://www.balena.io/etcher/) to write to an SD card
+1. Download [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/)
+2. Use [Etcher](https://www.balena.io/etcher/) to write the image to an SD card
 3. Configure wifi to access the host ([docs](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md))
     1. Generate WIFI passphrase
 
@@ -50,7 +50,11 @@ Before installing the ArPI to a running Raspberry PI system [get the code](#gett
 
 1. Start the Raspberry PI Zero with the prepared SD card
 2. Check the installation configuration file: install.yaml
-3. Install the ArPI components with the management project from your development host (not the raspi). Before this step you will need to [build the web application for production mode](#building-for-production)!
+3. Generate your ssh keys
+   
+        ssh-keygen -t rsa -b 4096 -f ./arpi
+
+4. Install the ArPI components with the management project from your development host (not the raspi). Before this step you will need to [build the web application for production mode](#building-for-production)!
 
         # activate the python virtual environment
         pipenv shell
@@ -61,13 +65,16 @@ Before installing the ArPI to a running Raspberry PI system [get the code](#gett
         ./install.py webaplication
         ./install.py database
 
-4. Enable the services
+5. Enable the services
 
         # after login to your raspi
-        sudo systemctl enable argus_server argus_monitor nginx
-        sudo systemctl start argus_server argus_monitor
-        # wait some seconds
-        sudo systemctl start nginx
+        sudo systemctl enable nginx argus_server argus_monitor
+        sudo systemctl start nginx argus_server argus_monitor
 
-5. You can access the web application
+6. You can access the web application https://arpi.local
+* Default registration code for admin: ABCD1234
+* Default access code: 1234
+* You can find the default production settings: [Project folder]/server/src/data.py - method env_prod
+
+
 
