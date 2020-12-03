@@ -11,8 +11,14 @@
 
     2. Append the output to the file "/rootfs/etc/wpa_supplicant/wpa_supplicant.conf"
 
-4. Start the Raspberry PI with the SD card and access it on [https://arpi.local](https://arpi.local)
-5. Use the default registration code:ABCD1234 and password:1234
+4. Start the Raspberry PI with the SD card
+5. You can access the web application https://arpi.local
+   * Default registration code for admin: ABCD1234
+   * Default access code: 1234
+
+!!! note
+    You can find the default production settings: [Project folder]/server/src/data.py - method env_prod
+
 
 ## Installing from source
 
@@ -72,9 +78,11 @@ Before installing the ArPI to a running Raspberry PI system [get the code](index
         sudo systemctl start nginx argus_server argus_monitor
 
 6. You can access the web application https://arpi.local
-* Default registration code for admin: ABCD1234
-* Default access code: 1234
-* You can find the default production settings: [Project folder]/server/src/data.py - method env_prod
+   * Default registration code for admin: ABCD1234
+   * Default access code: 1234
+
+!!! note
+    You can find the default production settings: [Project folder]/server/src/data.py - method env_prod
 
 
 
