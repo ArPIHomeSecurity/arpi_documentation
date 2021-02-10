@@ -15,7 +15,7 @@ the ArPI Home security system with the server and the webapplication components.
 |--arpi_webapplication: frontend
 ```
 
-## Prequisities
+## Prerequisites
 
 * python 3
 * python virtualenv / pipenv (for management and server)
@@ -23,6 +23,7 @@ the ArPI Home security system with the server and the webapplication components.
 * docker (for server)
 
 Preparing environments:
+
 * Prepare virtualenv
     ```bash
     virtualenv -p /usr/bin/python3 pyenv
