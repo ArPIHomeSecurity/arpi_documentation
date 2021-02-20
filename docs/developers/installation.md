@@ -1,4 +1,4 @@
-# Installation
+This page describes how to install the security system to a Raspberry PI.
 
 ## Installing from image
 

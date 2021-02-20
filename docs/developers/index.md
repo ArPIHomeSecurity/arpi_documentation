@@ -1,6 +1,10 @@
 Help for developers/contributors.
 
-## Getting the code
+!!! note
+    The development on the Raspberry PI can be time consuming.
+    Use your pc for development and deploy the code changes to a Raspberry PI.
+
+## Getting the code for local development
 
 Open a terminal, navigate into your working directory and run the following command:
 ```bash
@@ -15,26 +19,32 @@ the ArPI Home security system with the server and the webapplication components.
 |--arpi_webapplication: frontend
 ```
 
-## Prerequisites
+## Prerequisites for development
 
 * python 3
-* python virtualenv / pipenv (for management and server)
+* python pipenv (for management and server)
 * nodejs (for the webapplication)
-* docker (for server)
+* docker (for management and server)
+* For PyGObject on Ubuntu/Debian (for server)
+```bash
+    sudo apt install \
+        gcc \
+        libgirepository1.0-dev \
+        libcairo2-dev \
+        pkg-config \
+        python3-dev \
+        gir1.2-gtk-3.0
+```
 
 Preparing environments:
 
-* Prepare virtualenv
+* Server: python
     ```bash
-    virtualenv -p /usr/bin/python3 pyenv
+    pipenv install --dev
     ```
-* Prepare pipenv
+* Webapplication: angular
     ```bash
-    pipenv install
-    ```
-* Prepare node modules
-    ```bash
-    npm install
+    npm install --dev
     ```
 
 ## Features
@@ -50,4 +60,12 @@ The hardware clock is updated every hour from system clock and updates the syste
 The software is configured to work with a GSM module (tested with SIM900A) on serial port /dev/ttyAMA0 9600 Baud.
 The console on serial port is disabled.
 
-### NoIP and Certbot
+### NoIP
+
+You can use a NoIP provider for accesing the security system remotely
+on the same domain name.
+
+### Certbot
+
+You can switch the connection of the web application to a signed HTTPS connection
+with the help of Certbot.
