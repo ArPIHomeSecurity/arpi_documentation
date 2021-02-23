@@ -34,7 +34,7 @@ nav:
         - End user: end_users/index.md
         - Use: end_users/user.md
         - Administer: end_users/admin.md
-        - Glossary: end_user/glossary.md
+        - Glossary: end_users/glossary.md
     - Security Engineers:
         - Security Engineers: security_engineers/index.md
     - Developers: 
