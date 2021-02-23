@@ -3,6 +3,7 @@ This section describes how to use the ArPI security system.
 # Roles
 
 Currently the system has two types of roles:
+
 * user: they can only arm or disarm the system and get some read olny information
 * admin: they can access any functionalty of the system
 
@@ -17,6 +18,7 @@ user to access the system from the registered device (PC, mobile, etc.).
 Users should receive registration codes from the administrator(s) of the system.
 
 Accepted registration code formats:
+
 * ABC-DEF-123
 * ABCDEF123
 * abc-def-123
