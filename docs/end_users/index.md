@@ -1,29 +1,43 @@
-# End users manual
+This section describes how to use the ArPI security system.
 
-## Registering devices
+# Roles
+
+Currently the system has two types of roles:
+* user: they can only arm or disarm the system and get some read olny information
+* admin: they can access any functionalty of the system
+
+
+# Common functions
+
+On this page we describe the function that admins and users can use similarly.
+## Registering device
+
+Registering a device for the security system will enable a specific
+user to access the system from the registered device (PC, mobile, etc.).
+Users should receive registration codes from the administrator(s) of the system.
+
+Accepted registration code formats:
+* ABC-DEF-123
+* ABCDEF123
+* abc-def-123
+* abcdef123
+
+TODO: default registration code of admin after first install
 
 ## Login
+You can login to the security system with a registered user on a registered device.
+Use the access code of the user to login the system.
+
+Accepted access code format: any digits with at least 4 length
+
+TODO: default access code of admin after first install
 
 ## Arm/disarm
 
-## Sensors
+Logged in users can arm and disarm the system on the main page.
 
-## Zones
+## Sabotage
 
-## Clock
-
-You can see the date and time from three sources:
-
-1. Network
-2. System
-3. Hardware clock
-
-When no network time is available it is possible to change the system clock.
-You can configure the timezone, too.
-
-## Notifications
-
-## Networking
-
-## Users
+You can receive sabotage alert from the security system in disarmed state
+as well when the tamper circiut is interrupted.
 
