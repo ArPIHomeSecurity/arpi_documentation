@@ -6,7 +6,7 @@ Zones can be added/removed and updated.
 
 Every zone can be configured based on the arm types.
 
-1. If alerting is enalbed or not
+1. If alerting is enabled or not
 2. The delay between the alert on he sensor and the system alert
 
 A special type of the zones is the tamper. Tamper alerts can be triggered
@@ -18,8 +18,8 @@ You can see the list of the sensors in the security system.
 Sensors can be added/removed and updated.
 
 Sensors are connected to channels on the board.
-Every sensor can be enabled and disabled. Disable sensor doens't trigger alerts.
-The sensors will be assigned to a zone, which defined the alert behaviour for them.
+Every sensor can be enabled and disabled. Disable sensor doesn't trigger alerts.
+The sensors will be assigned to a zone, which defined the alert behavior for them.
 Any other options currently are only documentation (they don't affect the alerting).
 
 ## Clock
@@ -69,7 +69,7 @@ automatically.
 ### Restrict the access to the host name
 
 If you enable this option the security system will be accessible only on the
-hostname you defined.
+host name you defined.
 
 ### Enable SSH connection
 
@@ -85,4 +85,4 @@ Every registration code can have an expiry time.
 After the registration code is generated it will be accessible until the dialog is closed.
 
 !!! warning
-    Always share the regsitration and access codes securly.
+    Always share the registration and access codes securely.
