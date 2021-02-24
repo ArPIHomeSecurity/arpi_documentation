@@ -29,6 +29,8 @@ npm run postbuild
 export DIST=dist-production
 # building the application
 ng build --configuration=production --localize
+# compress the files
+npm run compress
 # move default language to the root of the output folder
 npm run postbuild
 ```
