@@ -17,6 +17,9 @@ theme:
         primary: indigo
         accent: orange
 
+extra_css:
+  - styles/arpi.css
+
 extra_javascript:
   - 'assets/jquery.js'
 
