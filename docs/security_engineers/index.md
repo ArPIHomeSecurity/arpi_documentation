@@ -1,6 +1,6 @@
 # Installation manual
 
-## Replace mainboard
+## Replace main board
 
 ## Resistors and sensors
 

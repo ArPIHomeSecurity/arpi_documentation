@@ -2,9 +2,9 @@ This page describes how to install the security system to a Raspberry PI.
 
 ## Installing from image
 
-1. Download the image from [Github](https://github.com/ArPIHomeSecurity/arpi_management/releases/)
+1. Download the image from [GitHub](https://github.com/ArPIHomeSecurity/arpi_management/releases/)
 2. Use [Etcher](https://www.balena.io/etcher/) to write to an SD card
-3. Configure wifi
+3. Configure WiFi
     1. Generate WIFI passphrase
 
             wpa_passphrase <ssid> [passphrase]
@@ -26,7 +26,7 @@ This page describes how to install the security system to a Raspberry PI.
 
 1. Download [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/)
 2. Use [Etcher](https://www.balena.io/etcher/) to write the image to an SD card
-3. Configure wifi to access the host ([docs](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md))
+3. Configure WiFi to access the host ([docs](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md))
     1. Generate WIFI passphrase
 
             wpa_passphrase <ssid> [passphrase]
@@ -43,7 +43,7 @@ This page describes how to install the security system to a Raspberry PI.
     2. Keyboard
     3. Timezone
     4. Enable serial
-    5. Expand filesystem
+    5. Expand file system
 7. Update and upgrade Raspbian
 
         sudo apt update
@@ -60,7 +60,7 @@ Before installing the ArPI to a running Raspberry PI system [get the code](index
    
         ssh-keygen -t rsa -b 4096 -f ./arpi
 
-4. Install the ArPI components with the management project from your development host (not the raspi). Before this step you will need to [build the web application for production mode](#building-for-production)!
+4. Install the ArPI components with the management project from your development host (not the Raspberry PI). Before this step you will need to [build the web application for production mode](#building-for-production)!
 
         # activate the python virtual environment
         pipenv shell

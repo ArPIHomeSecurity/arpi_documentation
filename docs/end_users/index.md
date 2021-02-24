@@ -4,8 +4,8 @@ This section describes how to use the ArPI security system.
 
 Currently the system has two types of roles:
 
-* user: they can only arm or disarm the system and get some read olny information
-* admin: they can access any functionalty of the system
+* user: they can only arm or disarm the system and get some read only information
+* admin: they can access any functionality of the system
 
 
 ## Common functions
@@ -43,7 +43,7 @@ Logged in users can arm and disarm the system on the main page.
 ### Sabotage
 
 You can receive sabotage alert from the security system in disarmed state
-as well when the tamper circiut is interrupted.
+as well when the tamper circuit is interrupted.
 
 ### Sessions
 

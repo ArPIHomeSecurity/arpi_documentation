@@ -11,7 +11,7 @@ Open a terminal, navigate into your working directory and run the following comm
 git clone --recurse-submodules https://github.com/ArPIHomeSecurity/arpi_management.git
 ```
 This command will download the source code of management project of
-the ArPI Home security system with the server and the webapplication components.
+the ArPI Home security system with the server and the web application components.
 
 ```
 + arpi_management: managing the software components
@@ -23,7 +23,7 @@ the ArPI Home security system with the server and the webapplication components.
 
 * python 3
 * python pipenv (for management and server)
-* nodejs (for the webapplication)
+* nodejs (for the web application)
 * docker (for management and server)
 * For PyGObject on Ubuntu/Debian (for server)
 ```bash
@@ -42,7 +42,7 @@ Preparing environments:
     ```bash
     pipenv install --dev
     ```
-* Webapplication: angular
+* Web application: angular
     ```bash
     npm install --dev
     ```
@@ -51,9 +51,11 @@ Preparing environments:
 
 ### Hardware clock
 
-The software is configured to use a DS1307 hardware clock. The configuration is prepared during the installation of the board (arpi_management/scripts/install_environment.sh).
+The software is configured to use a DS1307 hardware clock. The configuration is prepared
+during the installation of the board (arpi_management/scripts/install_environment.sh).
 
-The hardware clock is updated every hour from system clock and updates the system clock on reboot (arpi_management/arpi_server/etc/cron/hwclock).
+The hardware clock is updated every hour from system clock and updates
+the system clock on reboot (arpi_management/arpi_server/etc/cron/hwclock).
 
 ### GSM module
 
@@ -62,7 +64,7 @@ The console on serial port is disabled.
 
 ### NoIP
 
-You can use a NoIP provider for accesing the security system remotely
+You can use a NoIP provider for accessing the security system remotely
 on the same domain name.
 
 ### Certbot

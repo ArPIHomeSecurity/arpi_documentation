@@ -4,7 +4,7 @@ can be used in different modes.
 1. Normal mode: the application uses the backend services
 2. Demo mode: the application uses the mock services replacing the backend
 
-The demo mode is for running on Gihub pages ([demo](https://demo.arpi-security.info)).
+The demo mode is for running on GitHub pages ([demo](https://demo.arpi-security.info)).
 
 ## Normal mode
 
@@ -57,11 +57,11 @@ npm run serve
 
 ### Running in demo production mode
 
-This mode is for running the web application in demo mode on Github pages with
+This mode is for running the web application in demo mode on GitHub pages with
 a mock REST API.
 
 ```bash
-# setting the environment
+# setting the 
 export DIST=dist-demo
 # building the application
 ng build --configuration=demo --localize
@@ -73,12 +73,15 @@ npm run serve
 
 ## Translations
 
-You can translate the application with the following command.
+You can update the translations of the application with the following command.
 
 ```bash
 npm run extract-i18n
 ```
 
-The translations are stored in webapplication/src/locales
+The translations are stored in "webapplication/src/locales".
 
 Use [POEDIT](https://poedit.net/) to manage translations.
+
+!!! todo
+    Document adding new translations

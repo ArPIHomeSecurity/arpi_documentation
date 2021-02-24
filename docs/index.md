@@ -4,7 +4,7 @@ ArPI is a Raspberry PI based home security system.
 
 ## Goal of the project
 
-By replacing the mainboard of an old home security system have an easily manageable smart system.
+By replacing the main board of an old home security system have an easily manageable smart system.
 
 * Reuse wiring, sensors and keyboards of the security system
 * Accessing the system on local network or remotely on the web
