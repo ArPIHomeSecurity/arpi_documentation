@@ -5,6 +5,7 @@ You can see the list of the zones in the security system.
 Zones can be added/removed and updated.
 
 Every zone can be configured based on the arm types.
+
 1. If alerting is enalbed or not
 2. The delay between the alert on he sensor and the system alert
 
