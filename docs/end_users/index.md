@@ -55,5 +55,5 @@ The timeout is restarted with every change on the application.
 You can change the language of the application from the menu.
 You can contribute in the translation:
 
-* ![translations](developers/web_application#translations)
-* https://github.com/ArPIHomeSecurity/arpi_webapplication
+* [Translations](../developers/web_application.md#translations)
+* [Source code](https://github.com/ArPIHomeSecurity/arpi_webapplication)
