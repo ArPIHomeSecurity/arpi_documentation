@@ -49,3 +49,11 @@ as well when the tamper circiut is interrupted.
 
 After the login to the security system you have a session with a 15 minutes timeout.
 The timeout is restarted with every change on the application.
+
+### Language
+
+You can change the language of the application from the menu.
+You can contribute in the translation:
+
+* ![translations](developers/web_application#translations)
+* https://github.com/ArPIHomeSecurity/arpi_webapplication
