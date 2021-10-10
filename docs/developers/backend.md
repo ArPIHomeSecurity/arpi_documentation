@@ -20,12 +20,19 @@ for DB_PASSWORD in server/etc/secrets.env.
 
 ```bash
 # start the database
-./scripts/start_database.sh dev
+./scripts/start_database.sh
 # prepare the users and tables
-./scripts/update_database_struct.sh dev
+pipenv run flask init-db
+pipenv run flask migrate
+pipenv run flask upgrade
 # prepare a configuration
-./scripts/update_database_data.sh dev test_01
+pipenv run src/data.py -d -c test_01
 ```
+
+## Building the web application
+
+Before using the application you have to build the web application for development mode.
+See [here](web_application.md#building-for-development)!
 
 ## Starting the backend services in development mode
 
@@ -35,12 +42,15 @@ You can run the backend services in development mode locally with mock adapters.
 # go the server folder
 cd server
 # start the database
-./scripts/start_database.sh dev
+./scripts/start_database.sh
 # start the REST API (it also serves the web application)
-./scripts/start_server.sh dev
-# start the monitoring service
-./scripts/start_monitor.sh dev
+pipenv run flask run -p 8080
+
+# in another terminal start the monitoring service
+pipenv run python -d -s -m monitoring
 ```
+
+Open the application on: http://localhost:8080
 
 ## Starting the backend services in production mode
 

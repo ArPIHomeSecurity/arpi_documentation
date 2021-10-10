@@ -52,7 +52,7 @@ This page describes how to install the security system to a Raspberry PI.
 
 ### Install ArPI
 
-Before installing the ArPI to a running Raspberry PI system [get the code](index.md#getting-the-code)!
+Before installing the ArPI to a running Raspberry PI system [get the code](index.md#getting-the-code-for-local-development)!
 
 1. Start the Raspberry PI Zero with the prepared SD card
 2. Check the installation configuration file: install.yaml

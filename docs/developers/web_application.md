@@ -9,7 +9,7 @@ The demo mode is for running on GitHub pages ([demo](https://demo.arpi-security.
 ## Normal mode
 
 In normal mode you can only build the web application and you need the backend system to use it.
-[See running the backend system!](/developers/backend/#starting-the-backend-services-in-development-mode)
+[See running the backend system!](backend.md#starting-the-backend-services-in-development-mode)
 
 ### Building for development
 
