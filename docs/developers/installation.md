@@ -43,6 +43,7 @@ This page describes how to install the security system to a Raspberry PI.
     2. Keyboard
     3. Timezone
     4. Enable serial
+    4. Enable ssh
     5. Expand file system
 7. Update and upgrade Raspbian
 
