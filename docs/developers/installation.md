@@ -57,34 +57,37 @@ This page describes how to install the security system to a Raspberry PI.
 Before installing the ArPI to a running Raspberry PI system [get the code](index.md#getting-the-code-for-local-development)!
 
 1. Start the Raspberry PI Zero with the prepared SD card
-2. Check the installation configuration file: install.yaml
+2. Check the installation configuration file (update the values for your installation environment): install.yaml
 3. Generate your ssh keys
    
         ssh-keygen -t rsa -b 4096 -f ./arpi
 
-4. Install the ArPI components with the management project from your development host (not the Raspberry PI). Before this step you will need to [build the web application for production mode](#building-for-production)!
+4. Install the ArPI components with the management project from your development host (not the Raspberry PI).
 
         # activate the python virtual environment
         pipenv shell
         # install the prerequisites
         ./install.py environment
-        ./install.py server
-        # build the production webapplication before install
-        ./install.py webaplication
+        ./install.py -u server
+        ./install.py monitor
         ./install.py database
 
-5. Enable the services
+5. Before this step you will need to [build the web application for production mode](#building-for-production)!
 
-        # after login to your raspi
+        ./install.py webaplication
+
+6. Enable the services
+
+        # after login with ssh to your raspi
         sudo systemctl enable nginx argus_server argus_monitor
         sudo systemctl start nginx argus_server argus_monitor
 
-6. You can access the web application https://arpi.local
-   * Default registration code for admin: ABCD1234
-   * Default access code: 1234
+7. You can access the web application https://arpi.local  
+Default registration code for admin: ABCD1234  
+Default access code: 1234
 
 !!! note
-    You can find the default production settings: [Project folder]/server/src/data.py - method env_prod
+    You can find the default production settings: [Project folder]/server/src/data.py
 
 
 
