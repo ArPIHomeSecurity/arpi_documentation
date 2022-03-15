@@ -48,7 +48,9 @@ Configure the GSM module settings to be able to send SMS messages to the given p
 ## Networking
 
 We assume that the security system is installed behind a firewall/router with NAT.
-
+You have to forward the ports 80 and 443 on the router to the IP address of the security system.
+* Port 80 is open for https://letsencrypt.org/ certificate validation and redirect to port 443
+* Port 443 is for secure communication with the security system
 
 ### Dynamic DNS
 
