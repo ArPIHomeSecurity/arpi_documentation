@@ -54,8 +54,9 @@ Open the application on: http://localhost:8080
 
 ## Starting the backend services in production mode
 
-On the Raspberry PI the backend service can be managed as systemd services.
+On the Raspberry PI the backend services can be managed as systemd services.
 
 ```bash
+sudo systemctl start argus_server
 sudo systemctl start argus_monitor
 ```

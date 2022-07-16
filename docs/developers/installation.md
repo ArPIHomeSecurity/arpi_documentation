@@ -74,7 +74,7 @@ Before installing the ArPI to a running Raspberry PI system [get the code](index
 
 5. Before this step you will need to [build the web application for production mode](#building-for-production)!
 
-        ./install.py webaplication
+        ./install.py webapplication
 
 6. Enable the services
 
@@ -87,7 +87,7 @@ Default registration code for admin: ABCD1234
 Default access code: 1234
 
 !!! note
-    You can find the default production settings: [Project folder]/server/src/data.py
+    You can find the default production settings: [Project folder]/server/src/data.py => def env_prod()
 
 
 
