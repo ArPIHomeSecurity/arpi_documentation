@@ -30,6 +30,12 @@ markdown_extensions:
     - toc:
         permalink: true
     - footnotes
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+
 
 nav:
     - Home: index.md
@@ -43,7 +49,7 @@ nav:
     - Developers: 
         - Overview: developers/index.md
         - Installation: developers/installation.md
-        - Web application: developers/web_application.md
         - Backend: developers/backend.md
+        - Web application: developers/web_application.md
     - About:
         About: about.md

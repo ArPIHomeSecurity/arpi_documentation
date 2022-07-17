@@ -8,11 +8,11 @@ The demo mode is for running on GitHub pages ([demo](https://demo.arpi-security.
 
 ## Normal mode
 
-In normal mode you can only build the web application and you need the backend system to use it.
-[See running the backend system!](backend.md#starting-the-backend-services-in-development-mode)
+In normal mode you can only build the web application and you can host it with Nginx.
 
-### Building for development
+### Development environment
 
+Building and running:
 ```bash
 # setting the environment
 export DIST=dist-development
@@ -20,10 +20,13 @@ export DIST=dist-development
 ng build --localize
 # move default language to the root of the output folder
 npm run postbuild
+npm run serve
 ```
 
-### Building for production
+### Production environment
 
+
+Building locally:
 ```bash
 # setting the environment
 export DIST=dist-production
@@ -31,6 +34,11 @@ export DIST=dist-production
 ng build --configuration=production --localize
 # move default language to the root of the output folder
 npm run postbuild
+```
+
+Running on Raspberry:
+```bash
+sudo systemctl start nginx
 ```
 
 ## Demo mode

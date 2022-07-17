@@ -1,16 +1,69 @@
 The backend system has three major components:
 
-1. The server provides the REST API to communicate with the web application
-2. The monitor implements the main functionality (IO handling, RTC, GSM...)
-3. Postgres database for storing persistent information
+1. The server provides the REST API to communicate with the security system.
+2. The monitor implements the main functionality (IO handling, RTC, GSM...).
+3. PostgreSQL database for storing persistent information.
 
-## Local development
+## Local/development architecture
 
-![local development](images/local_development.svg)
+```mermaid
+erDiagram
+  WEBAPPLICATION }|--|| NGINX : serve
+  NGINX {
+    environment docker
+    port p4200
+  }
+  NGINX }|--|{ WEBAPP-SOURCE : static-files
+  WEBAPPLICATION }|--|| SERVER : REST-API
+  SERVER {
+    environment pipenv-python3
+    port p8080
+  }
+  WEBAPPLICATION }|--|| MONITOR : SOCKET-IO
+  MONITOR {
+    environment pipenv-python3
+    port p8081
+  }
+  SERVER ||--|| MONITOR : IPC-SOCKET
+  MONITOR }|--|| DATABASE : PSYCOPG2
+  SERVER }|--|| DATABASE : PSYCOPG2
+  DATABASE {
+    environment docker
+    port p5432
+    type postgresql
+  }
+```
 
 ## Production architecture
 
-![production](images/production.svg)
+```mermaid
+erDiagram
+  WEBAPPLICATION }|--|| NGINX : communication
+  NGINX {
+    environment docker
+    port p80--p443
+  }
+  NGINX }|--|{ WEBAPP-SOURCE : static-files
+  NGINX }|--|| SERVER : REST-API
+  SERVER {
+    environment pipenv-python3
+    port file-socket
+  }
+  NGINX }|--|| MONITOR : SOCKET-IO
+  MONITOR {
+    environment pipenv-python3
+    host localhost
+    port p8081
+  }
+  SERVER ||--|| MONITOR : IPC-SOCKET
+  MONITOR }|--|| DATABASE : PSYCOPG2
+  SERVER }|--|| DATABASE : PSYCOPG2
+  DATABASE {
+    type postgresql
+    host localhost
+    port p5432
+  }
+```
 
 ## Preparing the database for development
 
@@ -29,11 +82,6 @@ pipenv run flask upgrade
 pipenv run src/data.py -d -c test_01
 ```
 
-## Building the web application
-
-Before using the application you have to build the web application for development mode.
-See [here](web_application.md#building-for-development)!
-
 ## Starting the backend services in development mode
 
 You can run the backend services in development mode locally with mock adapters.
@@ -43,14 +91,18 @@ You can run the backend services in development mode locally with mock adapters.
 cd server
 # start the database
 ./scripts/start_database.sh
-# start the REST API (it also serves the web application)
-pipenv run flask run -p 8080
+# start the REST API
+pipenv run flask run
+# or
+pipenv run start-server
 
 # in another terminal start the monitoring service
 pipenv run python -d -s -m monitoring
+# or
+pipenv run start-monitor
 ```
 
-Open the application on: http://localhost:8080
+REST API is available on: http://localhost:8080
 
 ## Starting the backend services in production mode
 
