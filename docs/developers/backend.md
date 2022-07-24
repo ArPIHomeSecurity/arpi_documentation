@@ -115,7 +115,7 @@ pipenv run start-monitor
 
 REST API is available on: http://localhost:8080
 
-## Deploying the backend services to Raspberry:
+## Deploying the backend services to Raspberry
 
 ```bash
 # go the arpi_management project
