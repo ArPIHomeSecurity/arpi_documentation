@@ -4,6 +4,17 @@ The backend system has three major components:
 2. The monitor implements the main functionality (IO handling, RTC, GSM...).
 3. PostgreSQL database for storing persistent information.
 
+
+## Source code
+
+The source code of the backend system:
+[https://github.com/ArPIHomeSecurity/arpi_server](https://github.com/ArPIHomeSecurity/arpi_server).
+It is a sub-module of the arpi_management project:
+[https://github.com/ArPIHomeSecurity/arpi_management.git](https://github.com/ArPIHomeSecurity/arpi_management.git)
+
+You find how to get the source code [here](index.md#getting-the-code)!
+
+
 ## Local/development architecture
 
 ```mermaid
@@ -103,6 +114,14 @@ pipenv run start-monitor
 ```
 
 REST API is available on: http://localhost:8080
+
+## Deploying the backend services to Raspberry:
+
+```bash
+# go the arpi_management project
+pipenv run ./install.py -vpe prod server
+pipenv run ./install.py -vpe prod monitoring
+```
 
 ## Starting the backend services in production mode
 

@@ -48,8 +48,9 @@ nav:
         - Security Engineers: security_engineers/index.md
     - Developers: 
         - Overview: developers/index.md
-        - Installation: developers/installation.md
         - Backend: developers/backend.md
         - Web application: developers/web_application.md
+        - Installation: developers/installation.md
+        - Deployment: developers/deployment.md
     - About:
         About: about.md
