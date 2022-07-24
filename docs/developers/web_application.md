@@ -68,7 +68,7 @@ ng build --configuration=demo-dev --localize
 DIST=dist-demo-dev npm run serve
 
 # serve english only
-ng serve --configuration=demo-dev --watch --poll 2000
+ng serve --configuration=demo --watch --poll 2000
 ```
 
 ### Production
@@ -80,9 +80,6 @@ This mode is for running the web application in demo mode on GitHub pages.
 ng build --configuration=demo --localize
 # start serving the web application on http://localhost:4200
 DIST=dist-demo npm run serve
-
-# serve english only
-ng serve --configuration=demo --watch --poll 2000
 ```
 
 ## Translations
