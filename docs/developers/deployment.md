@@ -6,13 +6,13 @@ existing system by deploying the software components from the source code.
 You find how to get the source code [here](index.md#getting-the-code)!
 
 
-# Prerequisites
+## Prerequisites
 
 1. Source code
 2. Existing running security system accessible with SSH
 
 
-# Deployment configuration
+## Deployment configuration
 
 The project contains a template file for creating configurations.
 
@@ -32,7 +32,7 @@ The '-e' argument will select the new configuration file.
 
 Configuration file name template: 'install[.< environment >].yaml'
 
-# Deploying components
+## Deploying components
 
 ```bash
 # deploying server

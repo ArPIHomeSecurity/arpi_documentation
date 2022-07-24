@@ -10,7 +10,8 @@ repo_url: https://github.com/ArPIHomeSecurity/arpi_documentation
 theme:
     name: material
     features:
-        - tabs
+        - navigation.tabs
+        - navigation.top
     logo: assets/argus-eye-30.png
     favicon: assets/argus-eye-16.png
     palette:
@@ -52,5 +53,4 @@ nav:
         - Web application: developers/web_application.md
         - Installation: developers/installation.md
         - Deployment: developers/deployment.md
-    - About:
-        About: about.md
+    - About: about.md
