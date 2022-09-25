@@ -51,7 +51,7 @@ You have two options to prepare the SD card with
     1. Locale
     2. Keyboard
     3. Timezone
-    4. Enable serial
+    4. Enable serial port
     5. Enable i2c
     6. Enable ssh
     7. Expand file system
@@ -75,7 +75,7 @@ You have two options to prepare the SD card with
     ssh pi@raspberrypi.local
     ```
 4. Configure some general settings with "raspi-config" and reboot
-    * Enable serial
+    * Enable serial port
     * Enable i2c
     * Enable ssh
     * Expand file system
@@ -122,6 +122,3 @@ Default access code: 1234
 
 !!! note
     You can find the default production settings: [Project folder]/server/src/data.py => def env_prod()
-
-
-

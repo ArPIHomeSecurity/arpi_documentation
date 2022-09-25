@@ -53,4 +53,5 @@ nav:
         - Web application: developers/web_application.md
         - Installation: developers/installation.md
         - Deployment: developers/deployment.md
+        - Testing: developers/testing.md
     - About: about.md
