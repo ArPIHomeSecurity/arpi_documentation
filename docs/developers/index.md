@@ -4,7 +4,7 @@ Help for developers/contributors.
     The development on the Raspberry PI can be time consuming.
     Use your pc for development and deploy the code changes to a Raspberry PI.
 
-## Getting the code for local development
+## Getting the code
 
 Open a terminal, navigate into your working directory and run the following command:
 ```bash

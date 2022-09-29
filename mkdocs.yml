@@ -10,7 +10,8 @@ repo_url: https://github.com/ArPIHomeSecurity/arpi_documentation
 theme:
     name: material
     features:
-        - tabs
+        - navigation.tabs
+        - navigation.top
     logo: assets/argus-eye-30.png
     favicon: assets/argus-eye-16.png
     palette:
@@ -30,6 +31,12 @@ markdown_extensions:
     - toc:
         permalink: true
     - footnotes
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+
 
 nav:
     - Home: index.md
@@ -42,8 +49,9 @@ nav:
         - Security Engineers: security_engineers/index.md
     - Developers: 
         - Overview: developers/index.md
-        - Installation: developers/installation.md
-        - Web application: developers/web_application.md
         - Backend: developers/backend.md
-    - About:
-        About: about.md
+        - Web application: developers/web_application.md
+        - Installation: developers/installation.md
+        - Deployment: developers/deployment.md
+        - Testing: developers/testing.md
+    - About: about.md

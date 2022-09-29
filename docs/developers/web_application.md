@@ -6,69 +6,80 @@ can be used in different modes.
 
 The demo mode is for running on GitHub pages ([demo](https://demo.arpi-security.info)).
 
+## Source code
+
+The source code of the backend system:
+[https://github.com/ArPIHomeSecurity/arpi_webapplication](https://github.com/ArPIHomeSecurity/arpi_webapplication).
+It is a sub-module of the arpi_management project:
+[https://github.com/ArPIHomeSecurity/arpi_management.git](https://github.com/ArPIHomeSecurity/arpi_management.git)
+
+You find how to get the source code [here](index.md#getting-the-code)!
+
 ## Normal mode
 
-In normal mode you can only build the web application and you need the backend system to use it.
-[See running the backend system!](backend.md#starting-the-backend-services-in-development-mode)
+In normal mode you can build the web application and you can host localized version with Nginx.
 
-### Building for development
+### Development
 
+Building and running:
 ```bash
-# setting the environment
-export DIST=dist-development
-# building the application
+# building the application with locales
 ng build --localize
-# move default language to the root of the output folder
-npm run postbuild
+# start serving the web application on http://localhost:4200
+DIST=dist-development npm run serve
+
+# serve english only
+ng serve --watch --poll 2000
 ```
 
-### Building for production
+### Production
 
+
+Building locally:
 ```bash
-# setting the environment
-export DIST=dist-production
-# building the application
+# building the application with locales
 ng build --configuration=production --localize
-# compress the files
-npm run compress
-# move default language to the root of the output folder
-npm run postbuild
+```
+
+Deploying to Raspberry:
+```bash
+# go the arpi_management project
+pipenv run ./install.py -vpe prod webapplication
+```
+
+Running on Raspberry:
+```bash
+sudo systemctl start nginx
 ```
 
 ## Demo mode
 
-In the demo mode the application can be run as a standalone application.
+In the demo mode the application can be run as a standalone application without backend the service.
 
-### Running in demo development mode
+### Development
 
 This mode is for running the web application in demo development mode locally with
 a mock REST API.
 
 ```bash
-# setting the environment
-export DIST=dist-demo-dev
-# building the application
+# building the application with locales
 ng build --configuration=demo-dev --localize
-# move default language to the root of the output folder
-npm run postbuild
 # start serving the web application on http://localhost:4200
-npm run serve
+DIST=dist-demo-dev npm run serve
+
+# serve english only
+ng serve --configuration=demo --watch --poll 2000
 ```
 
-### Running in demo production mode
+### Production
 
-This mode is for running the web application in demo mode on GitHub pages with
-a mock REST API.
+This mode is for running the web application in demo mode on GitHub pages.
 
 ```bash
-# setting the 
-export DIST=dist-demo
-# building the application
+# building the application with locales
 ng build --configuration=demo --localize
-# move default language to the root of the output folder
-npm run postbuild
 # start serving the web application on http://localhost:4200
-npm run serve
+DIST=dist-demo npm run serve
 ```
 
 ## Translations
