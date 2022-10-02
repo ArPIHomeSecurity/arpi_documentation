@@ -23,7 +23,7 @@ pymdown-extensions==9.5
 pyparsing==2.4.6
 python-dateutil==2.8.2
 pytz==2019.3
-PyYAML==5.2
+PyYAML==5.4
 pyyaml_env_tag==0.1
 recommonmark==0.6.0
 requests==2.22.0
