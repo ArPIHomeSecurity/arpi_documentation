@@ -45,8 +45,24 @@ nav:
         - Users: end_users/user.md
         - Administrators: end_users/admin.md
         - Glossary: end_users/glossary.md
+
+        # Help pages
+        - Register: end_users/register.md
+        - Login: end_users/login.md
+
+        - Alert history: end_users/alert_history.md
+        - Zones: end_users/zones.md
+        - Sensors: end_users/sensors.md
+        - Syren: end_users/syren.md
+        - Keypad: end_users/keypad.md
+        - Notifications: end_users/notifications.md
+        - Network: end_users/network.md
+        - Clock: end_users/clock.md
+        - Users: end_users/users.md
+
     - Security Engineers:
-        - Security Engineers: security_engineers/index.md
+        - Installation: security_engineers/index.md
+        - Restore access: security_engineers/restore_access.md
     - Developers: 
         - Overview: developers/index.md
         - Backend: developers/backend.md
