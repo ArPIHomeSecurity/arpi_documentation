@@ -18,7 +18,7 @@ pipenv run src/hash.py {registration code}
 # start postgres terminal (as argus user)
 psql
 # Find the id of the user
-> SELECT * FROM "user";
+> SELECT id, name, role FROM "user";
 # Update the user
 > UPDATE "user" SET registration_code='{output of the hash.py}' WHERE id={user id};
 ```
