@@ -21,23 +21,24 @@ The project contains a template file for creating configurations.
 
 1. Create a copy of the template.
 ```bash
-cp install.yaml install.test.yaml
+cp install/install.yaml install/test.yaml
 ```
 2. Update the configuration in the file.
 3. Use the new file.
 ```bash
-pipenv run ./install.py -e test
+pipenv run ./install.py -e test {component}
 ```
 The '-e' argument will select the new configuration file.
 
-Configuration file name template: 'install[.< environment >].yaml'
+Configuration file name template: 'install/[.< environment >].yaml'
 
 ## Deploying components
 
 ```bash
-# deploying server
+# deploying
 pipenv run ./install.py server
 pipenv run ./install.py monitoring
+pipenv run ./install.py database
 pipenv run ./install.py webapplication
 ```
 
@@ -46,5 +47,14 @@ The install script has different option for deploying the components.
 1. Restarting the component after deployment
 2. Updating the python virtual environment of server and monitoring
 
+```bash
+# deploying and restart
+pipenv run ./install.py -r server
+pipenv run ./install.py -r monitoring
+```
 
-
+```bash
+# deploying, update and restart
+pipenv run ./install.py -ur server
+pipenv run ./install.py -ur monitoring
+```
