@@ -37,7 +37,7 @@ Configuration file name template: 'install/[.< environment >].yaml'
 ```bash
 # deploying
 pipenv run ./install.py server
-pipenv run ./install.py monitoring
+pipenv run ./install.py monitor
 pipenv run ./install.py database
 pipenv run ./install.py webapplication
 ```
@@ -45,16 +45,16 @@ pipenv run ./install.py webapplication
 The install script has different option for deploying the components.
 
 1. Restarting the component after deployment
-2. Updating the python virtual environment of server and monitoring
+2. Updating the python virtual environment of server and monitoring components
 
 ```bash
 # deploying and restart
 pipenv run ./install.py -r server
-pipenv run ./install.py -r monitoring
+pipenv run ./install.py -r monitor
 ```
 
 ```bash
 # deploying, update and restart
 pipenv run ./install.py -ur server
-pipenv run ./install.py -ur monitoring
+pipenv run ./install.py -ur monitor
 ```
