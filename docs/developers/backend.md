@@ -108,7 +108,7 @@ pipenv run flask run
 pipenv run start-server
 
 # in another terminal start the monitoring service
-pipenv run python -d -s -m monitoring
+pipenv run python -d -s -m monitor
 # or
 pipenv run start-monitor
 ```
@@ -120,7 +120,7 @@ REST API is available on: http://localhost:8080
 ```bash
 # go the arpi_management project
 pipenv run ./install.py -vpe prod server
-pipenv run ./install.py -vpe prod monitoring
+pipenv run ./install.py -vpe prod monitor
 ```
 
 ## Starting the backend services in production mode

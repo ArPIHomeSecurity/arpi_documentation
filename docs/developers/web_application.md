@@ -26,10 +26,15 @@ Building and running:
 # building the application with locales
 ng build --localize
 # start serving the web application on http://localhost:4200
-DIST=dist-development npm run serve
+npm run serve-dev
+```
 
-# serve english only
-ng serve --watch --poll 2000
+```bash
+# building the application with auto update in terminal 1
+ng build --localize --watch --poll 2000
+
+# after the application is built first starting the webserver in terminal 2
+npm run serve-dev
 ```
 
 ### Production
@@ -65,10 +70,15 @@ a mock REST API.
 # building the application with locales
 ng build --configuration=demo-dev --localize
 # start serving the web application on http://localhost:4200
-DIST=dist-demo-dev npm run serve
+npm run serve-demo-dev
+```
 
-# serve english only
-ng serve --configuration=demo --watch --poll 2000
+```bash
+# building the application with auto update in terminal 1
+ng build --configuration=demo-dev --localize --watch --poll 2000
+
+# after the application is built first starting the webserver in terminal 2
+npm run serve-demo-dev
 ```
 
 ### Production
@@ -79,7 +89,7 @@ This mode is for running the web application in demo mode on GitHub pages.
 # building the application with locales
 ng build --configuration=demo --localize
 # start serving the web application on http://localhost:4200
-DIST=dist-demo npm run serve
+npm run serve-demo
 ```
 
 ## Translations

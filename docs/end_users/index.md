@@ -11,21 +11,6 @@ Currently the system has two types of roles:
 ## Common functions
 
 On this page we describe the function that admins and users can use similarly.
-### Registering device
-
-Registering a device for the security system will enable a specific
-user to access the system from the registered device (PC, mobile, etc.).
-Users should receive registration codes from the administrator(s) of the system.
-
-Accepted registration code formats:
-
-* ABC-DEF-123
-* ABCDEF123
-* abc-def-123
-* abcdef123
-
-!!! todo
-    Define the default registration code of admin after first install.
 
 ### Login
 You can login to the security system with a registered user on a registered device.
