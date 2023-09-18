@@ -42,7 +42,7 @@ nav:
     - Home: index.md
     - End user: 
         - Manual: end_users/index.md
-        - Users: end_users/user.md
+        - Users: end_users/users.md
         - Administrators: end_users/admin.md
         - Glossary: end_users/glossary.md
 
