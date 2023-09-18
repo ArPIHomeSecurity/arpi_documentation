@@ -10,23 +10,22 @@ ssh -i arpi_rsa argus@arpi.local
 2. Generate new registration code hash
 ```bash
 cd server
-pipenv run src/hash.py {registration code}
-```
+# list users
+./src/new_registration_code.py
+# generate code
+./src/new_registration_code.py -u 33774305
+User doesn't have registration code
 
-3. Add registration code to user
-```
-# start postgres terminal (as argus user)
-psql
-# Find the id of the user
-> SELECT id, name, role FROM "user";
-# Update the user
-> UPDATE "user" SET registration_code='{output of the hash.py}' WHERE id={user id};
+------------------------------
+Code generated for user (id: 33774305): Administrator
+New registration code: 293ACECEF9FF
+The code never expires
 ```
 
 4. Open the web interface
 5. Unregister the device on the login page
-6. Register device again using the {registration code}
+6. Register device again using the generated registration code
+([register device](../end_users/register.md))
 
 
-!!! Warning
-    Be careful of using the different formats of the registration code.
+
