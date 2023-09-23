@@ -48,7 +48,7 @@ ng build --configuration=production --localize
 
 Deploying to Raspberry:
 ```bash
-# go the arpi_management project
+# go to the arpi_management project
 pipenv run ./install.py -vpe prod webapplication
 ```
 

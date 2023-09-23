@@ -63,6 +63,8 @@ nav:
     - Security Engineers:
         - Installation: security_engineers/index.md
         - Restore access: security_engineers/restore_access.md
+        - System logs: security_engineers/system_logs.md
+
     - Developers: 
         - Overview: developers/index.md
         - Backend: developers/backend.md
@@ -70,4 +72,6 @@ nav:
         - Installation: developers/installation.md
         - Deployment: developers/deployment.md
         - Testing: developers/testing.md
+        - Logging: developers/logging.md
+
     - About: about.md

@@ -98,7 +98,7 @@ pipenv run src/data.py -d -c test_01
 You can run the backend services in development mode locally with mock adapters.
 
 ```bash
-# go the server folder
+# go to the server folder
 cd server
 # start the database
 ./scripts/start_database.sh
@@ -118,7 +118,7 @@ REST API is available on: http://localhost:8080
 ## Deploying the backend services to Raspberry
 
 ```bash
-# go the arpi_management project
+# go to the arpi_management project
 pipenv run ./install.py -vpe prod server
 pipenv run ./install.py -vpe prod monitor
 ```
