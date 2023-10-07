@@ -40,7 +40,7 @@ markdown_extensions:
 
 nav:
     - Home: index.md
-    - End user: 
+    - End user:
         - Manual: end_users/index.md
         - Users: end_users/users.md
         - Administrators: end_users/admin.md
@@ -65,7 +65,7 @@ nav:
         - Restore access: security_engineers/restore_access.md
         - System logs: security_engineers/system_logs.md
 
-    - Developers: 
+    - Developers:
         - Overview: developers/index.md
         - Backend: developers/backend.md
         - Web application: developers/web_application.md
@@ -73,5 +73,6 @@ nav:
         - Deployment: developers/deployment.md
         - Testing: developers/testing.md
         - Logging: developers/logging.md
+        - Simulator: developers/simulator.md
 
     - About: about.md
