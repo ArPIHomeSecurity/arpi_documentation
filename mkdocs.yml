@@ -50,7 +50,7 @@ nav:
         - Register: end_users/register.md
         - Login: end_users/login.md
 
-        - Alert history: end_users/alert_history.md
+        - Events: end_users/events.md
         - Zones: end_users/zones.md
         - Sensors: end_users/sensors.md
         - Syren: end_users/syren.md
