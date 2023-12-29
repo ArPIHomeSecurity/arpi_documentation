@@ -46,7 +46,7 @@ nav:
         - Administrators: end_users/admin.md
         - Glossary: end_users/glossary.md
 
-        # Help pages
+        # Help pages for the application
         - Register: end_users/register.md
         - Login: end_users/login.md
 
@@ -61,8 +61,10 @@ nav:
         - Users: end_users/users.md
 
     - Security Engineers:
-        - Installation: security_engineers/index.md
+        - Overview: security_engineers/index.md
+        - Installation: security_engineers/installation.md
         - Restore access: security_engineers/restore_access.md
+        - Generate hash: security_engineers/generate_hash.md
         - System logs: security_engineers/system_logs.md
 
     - Developers:
