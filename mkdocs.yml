@@ -40,17 +40,17 @@ markdown_extensions:
 
 nav:
     - Home: index.md
-    - End user: 
+    - End user:
         - Manual: end_users/index.md
         - Users: end_users/users.md
         - Administrators: end_users/admin.md
         - Glossary: end_users/glossary.md
 
-        # Help pages
+        # Help pages for the application
         - Register: end_users/register.md
         - Login: end_users/login.md
 
-        - Alert history: end_users/alert_history.md
+        - Events: end_users/events.md
         - Zones: end_users/zones.md
         - Sensors: end_users/sensors.md
         - Syren: end_users/syren.md
@@ -61,13 +61,20 @@ nav:
         - Users: end_users/users.md
 
     - Security Engineers:
-        - Installation: security_engineers/index.md
+        - Overview: security_engineers/index.md
+        - Installation: security_engineers/installation.md
         - Restore access: security_engineers/restore_access.md
-    - Developers: 
+        - Generate hash: security_engineers/generate_hash.md
+        - System logs: security_engineers/system_logs.md
+
+    - Developers:
         - Overview: developers/index.md
         - Backend: developers/backend.md
         - Web application: developers/web_application.md
         - Installation: developers/installation.md
         - Deployment: developers/deployment.md
         - Testing: developers/testing.md
+        - Logging: developers/logging.md
+        - Simulator: developers/simulator.md
+
     - About: about.md
