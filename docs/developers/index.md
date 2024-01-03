@@ -8,7 +8,16 @@ Help for developers/contributors.
 
 Open a terminal, navigate into your working directory and run the following command:
 ```bash
+# cloning the repositories
 git clone --recurse-submodules https://github.com/ArPIHomeSecurity/arpi_management.git
+
+# switch to the development branch
+git checkout dev_vXXXX
+git submodule foreach git checkout dev_vXXXX
+
+# switch to a released version
+git checkout vXXXX
+git submodule foreach git checkout vXXXX
 ```
 This command will download the source code of management project of
 the ArPI Home security system with the server and the web application components.
