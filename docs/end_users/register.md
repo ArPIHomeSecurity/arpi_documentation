@@ -1,4 +1,5 @@
-# Registering device - <img src="https://img.shields.io/badge/Access-User-orange?style=for-the-badge">
+# Registering device
+<img src="https://img.shields.io/badge/Access-User-orange?style=square">
 
 Registering a device for the security system will enable a specific
 user to access the system from the registered device (PC, mobile, etc.).

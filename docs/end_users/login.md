@@ -1,4 +1,4 @@
-# Login - <img src="https://img.shields.io/badge/Access-User-orange?style=for-the-badge">
+# Login - <img src="https://img.shields.io/badge/Access-User-orange?style=square">
 
 Users can login on registered devices. See [registering devices](register.md).
 The access code contains only numbers and the minimum length is 4.

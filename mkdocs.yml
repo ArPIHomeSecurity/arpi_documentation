@@ -2,7 +2,7 @@ site_name: ArPI - Home Security System
 site_url: https://www.arpi-security.info
 site_description: Documentation for the ArPI Home Security System
 site_author: Gábor Kovács
-copyright: Copyright © 2020 - ArPI Home Security
+copyright: Copyright © 2024 - ArPI Home Security
 
 repo_name: ArPI - documentation
 repo_url: https://github.com/ArPIHomeSecurity/arpi_documentation
@@ -42,23 +42,23 @@ nav:
     - Home: index.md
     - End user:
         - Manual: end_users/index.md
-        - Users: end_users/users.md
-        - Administrators: end_users/admin.md
+        - Register: end_users/register.md
+        - Login: end_users/login.md
+        - Events: end_users/events.md
         - Glossary: end_users/glossary.md
 
         # Help pages for the application
-        - Register: end_users/register.md
-        - Login: end_users/login.md
-
-        - Events: end_users/events.md
-        - Zones: end_users/zones.md
-        - Sensors: end_users/sensors.md
-        - Syren: end_users/syren.md
-        - Keypad: end_users/keypad.md
-        - Notifications: end_users/notifications.md
-        - Network: end_users/network.md
-        - Clock: end_users/clock.md
-        - Users: end_users/users.md
+        - Configurations:
+            - Areas: end_users/areas.md
+            - Zones: end_users/zones.md
+            - Sensors: end_users/sensors.md
+            - Outputs: end_users/outputs.md
+            - Syren: end_users/syren.md
+            - Keypad: end_users/keypad.md
+            - Notifications: end_users/notifications.md
+            - Network: end_users/network.md
+            - Clock: end_users/clock.md
+            - Users: end_users/users.md
 
     - Security Engineers:
         - Overview: security_engineers/index.md
@@ -78,3 +78,8 @@ nav:
         - Simulator: developers/simulator.md
 
     - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/slack 
+      link: https://arpi-security.slack.com/
