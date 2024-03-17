@@ -9,11 +9,15 @@ ssh -i arpi_rsa argus@arpi.local
 
 2. Generate new registration code hash
 ```bash
-cd server
+$ cd server
+
 # list users
-./src/new_registration_code.py
-# generate code
-./src/new_registration_code.py -u 33774305
+$ ./src/new_registration_code.py
+Users:
+ID: 33774305 = Administrator (admin):
+
+# generate code for the user with id 33774305
+$ ./src/new_registration_code.py -u 33774305
 User doesn't have registration code
 
 ------------------------------
