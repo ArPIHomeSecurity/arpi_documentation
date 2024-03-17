@@ -24,6 +24,9 @@ extra_css:
 extra_javascript:
   - 'assets/jquery.js'
 
+plugins:
+  - glightbox
+
 markdown_extensions:
     - admonition
     - codehilite:
@@ -36,6 +39,7 @@ markdown_extensions:
           - name: mermaid
             class: mermaid
             format: !!python/name:pymdownx.superfences.fence_code_format
+    - attr_list # for images
 
 
 nav:
