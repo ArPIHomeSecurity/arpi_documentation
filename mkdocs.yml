@@ -68,6 +68,7 @@ nav:
         - Overview: security_engineers/index.md
         - Installation: security_engineers/installation.md
         - Restore access: security_engineers/restore_access.md
+        - Reset database: security_engineers/reset_database.md
         - Generate hash: security_engineers/generate_hash.md
         - System logs: security_engineers/system_logs.md
 
