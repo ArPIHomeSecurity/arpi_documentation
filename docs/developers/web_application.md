@@ -9,8 +9,11 @@ The demo mode is for running on GitHub pages ([demo](https://demo.arpi-security.
 ## Source code
 
 The source code of the backend system:
+
 [https://github.com/ArPIHomeSecurity/arpi_webapplication](https://github.com/ArPIHomeSecurity/arpi_webapplication).
+
 It is a sub-module of the arpi_management project:
+
 [https://github.com/ArPIHomeSecurity/arpi_management.git](https://github.com/ArPIHomeSecurity/arpi_management.git)
 
 You find how to get the source code [here](index.md#getting-the-code)!
@@ -100,9 +103,17 @@ You can update the translations of the application with the following command.
 npm run extract-i18n
 ```
 
+This command will extract the translations from the source code and update the translation files.
 The translations are stored in "webapplication/src/locales".
 
-Use [POEDIT](https://poedit.net/) to manage translations.
+You can use tools like [POEDIT](https://poedit.net/) to manage the translations.
+
+After the translations are updated you can build the application with the new translations
+and deploy it.
+
+* [build production web application](/developers/web_application/#production_1)
+* [deploy to raspberry pi](/developers/deployment/#deploying-components)
+
 
 !!! todo
     Document adding new translations
