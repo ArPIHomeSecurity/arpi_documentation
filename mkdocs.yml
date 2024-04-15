@@ -25,6 +25,7 @@ extra_javascript:
   - 'assets/jquery.js'
 
 plugins:
+  - search
   - glightbox
 
 markdown_extensions:
