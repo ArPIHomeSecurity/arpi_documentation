@@ -24,6 +24,12 @@ If a Wiegand keypad is attached to the system users can register their RFID card
 1. In the list user select the action "Register card" of the given user
 2. Put the RFID card to the Wiegand keypad
 
+## SSH keys
+
+You can add an SSH key to the user, so the user can access the system via SSH using the key.
+Without the key, the user can access on SSH only with the password.
+
+See the [Network terminal access](network.md#terminal-access) section.
 
 ## Edit user
 

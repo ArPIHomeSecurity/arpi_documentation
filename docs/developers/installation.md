@@ -113,7 +113,7 @@ Before installing the ArPI to a running Raspberry PI system [get the code](index
     ./install.py webapplication
     ```
 6. Enable the services
-   ```
+    ```
     # after login with ssh to your raspi
     sudo systemctl enable nginx argus_server argus_monitor
     sudo systemctl start nginx argus_server argus_monitor

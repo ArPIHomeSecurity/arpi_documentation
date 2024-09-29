@@ -29,6 +29,11 @@ automatically.
 If you enable this option the security system will be accessible only on the
 host name you defined.
 
-## Enable SSH connection
+## Terminal access
 
-You can control the status of the SSH server with this option
+* Enable SSH connection: You can control the status of the SSH server with this option
+* Restrict SSH connection to local network: You can restrict the SSH connection to the local network
+* Enable SSH password authentication: You can enable/disable the password authentication for the SSH
+connection. If you disable it you have to use the SSH key for the connection.
+
+See user SSH key management in the [Users](users.md/#ssh-keys) section.
