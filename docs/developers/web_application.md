@@ -111,8 +111,8 @@ You can use tools like [POEDIT](https://poedit.net/) to manage the translations.
 After the translations are updated you can build the application with the new translations
 and deploy it.
 
-* [build production web application](/developers/web_application/#production_1)
-* [deploy to raspberry pi](/developers/deployment/#deploying-components)
+* [build production web application](#production_1)
+* [deploy to raspberry pi](deployment.md#deploying-components)
 
 
 !!! todo

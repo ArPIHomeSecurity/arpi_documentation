@@ -88,7 +88,7 @@ You have two options to prepare the SD card with
 
 ### Install ArPI
 
-Before installing the ArPI to a running Raspberry PI system [get the code](index.md#getting-the-code-for-local-development)!
+Before installing the ArPI to a running Raspberry PI system [get the code](index.md#getting-the-code)!
 
 1. Start the Raspberry PI Zero with the prepared SD card
 2. Check the installation configuration file (update the values for your installation environment): install.yaml
@@ -106,7 +106,7 @@ Before installing the ArPI to a running Raspberry PI system [get the code](index
     ./install.py monitor
     ./install.py database
     ```
-5. Before this step you will need to [build the web application for production mode](#building-for-production)!
+5. Before this step you will need to [build the web application for production mode](web_application.md#production_1)!
     ```
     ./install.py webapplication
     ```
