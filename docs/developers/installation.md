@@ -15,6 +15,7 @@ This page describes how to install the security system to a Raspberry PI.
 5. You can access the web application https://arpi.local
    * Default registration code for admin: ABCD1234
    * Default access code: 1234
+   * Default password for argus user on SSH: Argus.1234
 
 !!! note
     You can find the default production settings: [Project folder]/server/src/data.py - method env_prod
@@ -64,9 +65,10 @@ You have two options to prepare the SD card with
 #### Prepare the SD card with **Raspberry PI Imager**
 
 1. Select the operating system image
-    * Raspberry PI Zero W [Raspberry Pi OS Lite (32-bit)](https://www.raspberrypi.org/software/operating-systems/)
-    * Raspberry PI Zero W 2 [Raspberry Pi OS Lite (64-bit)](https://www.raspberrypi.org/software/operating-systems/)
+    * Raspberry PI Zero W [Raspberry Pi OS (Legacy) Lite (32-bit)](https://www.raspberrypi.org/software/operating-systems/)
+    * Raspberry PI Zero W 2 [Raspberry Pi OS (Legacy) Lite (32-bit)](https://www.raspberrypi.org/software/operating-systems/)
 2. Setup your configuration
+    * user name: pi
     * enable SSH with password authentication
     * configure WLAN
     * locale
