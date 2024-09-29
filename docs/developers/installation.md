@@ -13,9 +13,9 @@ This page describes how to install the security system to a Raspberry PI.
 
 4. Start the Raspberry PI with the SD card
 5. You can access the web application https://arpi.local
-   * Default registration code for admin: ABCD1234
-   * Default access code: 1234
-   * Default password for argus user on SSH: Argus.1234
+    * Default registration code for admin: ABCD1234
+    * Default access code: 1234
+    * Default password for argus user on SSH: Argus.1234
 
 !!! note
     You can find the default production settings: [Project folder]/server/src/data.py - method env_prod
