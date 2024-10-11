@@ -4,6 +4,7 @@
 Registering a device for the security system will enable a specific
 user to access the system from the registered device (PC, mobile, etc.).
 Users should receive registration codes from the administrator(s) of the system.
+Every registration code is unique and can be used only once.
 
 Accepted registration code formats:
 
