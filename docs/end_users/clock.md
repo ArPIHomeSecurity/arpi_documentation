@@ -1,11 +1,23 @@
 # Clock 
 <img src="https://img.shields.io/badge/Access-Administrator-red?style=square">
 
+
+## Time sources
 You can see the date and time from three sources:
 
-1. Network
-2. System
-3. Hardware clock
+* Network
+* System
+* Hardware clock
 
-When no network time is available it is possible to change the system clock.
-You can configure the timezone, too.
+## Manual setting
+
+You can set the date and time with time zone manually.
+
+## Uptime
+
+You can see the uptime of the following components:
+
+* System: operating system
+* Server: frontend service
+* Monitor: backend service
+* Nginx: web server

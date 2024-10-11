@@ -20,15 +20,14 @@ The outputs can be sorted manually with drag and drop.
 ## Edit output
 <img src="https://img.shields.io/badge/Access-Administrator-red?style=square">
 
-When editing an output you can set the name and description first. The next option is the output terminal.
-Already connected output terminals are disabled in the dropdown list.
 
-You can select the event source:
-* system: active when the system is armed
-* area: active when a selected area is armed
-* button: active when the button is pressed
+* **Name**: A short name of the output.
+* **Description**: A longer description of the output.
+* **Channel**: The output terminal of the board.
+* **Trigger**:
+    * Area: The output will be triggered when the selected area is armed.
+    * System: The output will be triggered when the system is armed.
+    * Button: The output will be triggered when the button is pressed on the web interface.
 
-For the output sign you can configure the delay and the duration. The delay is the time between the event and the activation of the output. The duration is the time the output is active.
-
-Only buttons can have duration. The duration is the time the button is active after pressing.
-
+* **Delay**: The delay before the output is activated.
+* **Duration**: The duration of the output activation. Only button type triggers can have duration.

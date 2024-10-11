@@ -14,13 +14,22 @@ Zones can be deleted if they have no sensors assigned.
 ## Edit zone
 <img src="https://img.shields.io/badge/Access-Administrator-red?style=square">
 
-When editing a zone, you can change the name of the zone and a longer description.
+* **Name**: A short name of the zone.
+* **Description**: A longer description of the zone.
 
-Use the check boxes if you want to enable alerting in the given arm state. You can set a delay before arming
-the sensors and a delay before alerting.
+Use the check boxes if you want to enable alerting in the given arm state. You can set a delay
+before arming the sensors and a delay before alerting.
 
-For creating a tamper zone you have to enable the alerting in all the arm states and set the delays to 0.
+* **Arm states**: The arm states of the system. The arm states are the following:
+    * **Disarmed**: The system is not armed.
+    * **Armed home**: The system is armed in home mode. The home mode is used when you are at home.
+    * **Armed away**: The system is armed in away mode. The away mode is used when you are not at home.
 
----
+* **Delays**:
+    * **Arm delay**: The delay before arming the sensors. It helps to leave the house after arming
+    the system.
+    * **Alert delay**: The delay before alerting. It helps to disarm the system before the alerting.
 
-- [Editing a sensor](sensors.md#edit-sensor)
+!!! Hint
+    For creating a tamper zone you have to enable the alerting in all the arm states and set
+    the delays to 0.
