@@ -54,7 +54,7 @@ pipenv run ./install.py -r monitor
 ```
 
 ```bash
-# deploying, update and restart
+# deploying, update (python virtual environment) and restart
 pipenv run ./install.py -ur server
 pipenv run ./install.py -ur monitor
 ```
