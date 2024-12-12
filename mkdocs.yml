@@ -91,3 +91,6 @@ extra:
   social:
     - icon: fontawesome/brands/slack 
       link: https://arpi-security.slack.com/
+  analytics:
+    provider: google
+    property: G-TD5FEX2MLN
