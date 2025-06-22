@@ -1,80 +1,49 @@
 The backend system has three major components:
 
-1. The server provides the REST API to communicate with the security system.
-2. The monitor implements the main functionality (IO handling, RTC, GSM...).
-3. PostgreSQL database for storing persistent information.
+1. **REST API Server** - Flask-based web server providing HTTP REST endpoints for system configuration and status
+2. **Monitor Service** - Core monitoring daemon handling hardware I/O, real-time clock, GSM communication, and system state management  
+3. **PostgreSQL Database** - Persistent storage for configurations, user data, alerts, and system logs
 
 
 ## Source code
 
 The source code of the backend system:
-[https://github.com/ArPIHomeSecurity/arpi_server](https://github.com/ArPIHomeSecurity/arpi_server).
+ [arpi_server](https://github.com/ArPIHomeSecurity/arpi_server).
 It is a sub-module of the arpi_management project:
-[https://github.com/ArPIHomeSecurity/arpi_management.git](https://github.com/ArPIHomeSecurity/arpi_management.git)
+[arpi_management](https://github.com/ArPIHomeSecurity/arpi_management.git)
 
 You find how to get the source code [here](index.md#getting-the-code)!
 
-
-## Local/development architecture
-
-```mermaid
-erDiagram
-  WEBAPPLICATION }|--|| NGINX : serve
-  NGINX {
-    environment docker
-    port p4200
-  }
-  NGINX }|--|{ WEBAPP-SOURCE : static-files
-  WEBAPPLICATION }|--|| SERVER : REST-API
-  SERVER {
-    environment pipenv-python3
-    port p8080
-  }
-  WEBAPPLICATION }|--|| MONITOR : SOCKET-IO
-  MONITOR {
-    environment pipenv-python3
-    port p8081
-  }
-  SERVER ||--|| MONITOR : IPC-SOCKET
-  MONITOR }|--|| DATABASE : PSYCOPG2
-  SERVER }|--|| DATABASE : PSYCOPG2
-  DATABASE {
-    environment docker
-    port p5432
-    type postgresql
-  }
-```
-
-## Production architecture
+## Architecture
 
 ```mermaid
 erDiagram
-  WEBAPPLICATION }|--|| NGINX : communication
-  NGINX {
-    environment docker
-    port p80--p443
-  }
-  NGINX }|--|{ WEBAPP-SOURCE : static-files
-  NGINX }|--|| SERVER : REST-API
-  SERVER {
-    environment pipenv-python3
-    port file-socket
-  }
+  NGINX }|--|{ WEBAPP-SOURCE : "static files"
+  NGINX }|--|| SERVER : "REST API"
   NGINX }|--|| MONITOR : SOCKET-IO
-  MONITOR {
-    environment pipenv-python3
-    host localhost
-    port p8081
-  }
   SERVER ||--|| MONITOR : IPC-SOCKET
-  MONITOR }|--|| DATABASE : PSYCOPG2
-  SERVER }|--|| DATABASE : PSYCOPG2
+  SERVER {
+    type flask
+  }
+  MONITOR }|--|| DATABASE : psycopg2
+  MONITOR {
+    type python-threading
+    server socket-io
+  }
+  SERVER }|--|| DATABASE : psycopg2
   DATABASE {
     type postgresql
-    host localhost
-    port p5432
   }
 ```
+
+## Port Configuration
+
+| Connection | Development | Production |
+|------------|-------------|------------|
+| NGINX communication | 4200 | 80, 443 |
+| SERVER REST API | 8080 | file socket |
+| MONITOR socket-io | 8081 | 8081 |
+| DATABASE psycopg2 | 5432 | 5432 |
 
 ## Preparing the database for development
 

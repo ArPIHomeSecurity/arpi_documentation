@@ -1,20 +1,35 @@
-The user interface of the security system is implemented in angular. This web application
-can be used in different modes.
+The user interface is built with modern web technologies providing a responsive, cross-platform experience:
 
-1. Normal mode: the application uses the backend services
-2. Demo mode: the application uses the mock services replacing the backend
+## Technology Stack
 
-The demo mode is for running on GitHub pages ([demo](https://demo.arpi-security.info)).
+- **Angular 18.x** - Modern TypeScript-based frontend framework
+- **Angular Material** - Material Design component library  
+- **Ionic Framework** - Cross-platform mobile development
+- **Capacitor** - Native mobile app capabilities
+- **RxJS** - Reactive programming for real-time updates
+- **Socket.IO Client** - Real-time bidirectional communication
+- **Angular i18n** - Internationalization support
+
+## Application Modes
+
+The application supports multiple deployment modes:
+
+### 1. Production Mode
+Full-featured application connecting to backend services on Raspberry Pi
+
+### 2. Development Mode  
+Local development with live reload and debugging tools
+
+### 3. Demo Mode
+Standalone application with mock services for demonstrations
+
+### 4. Mobile App Mode
+Native mobile application using Capacitor framework
 
 ## Source code
 
-The source code of the backend system:
-
-[https://github.com/ArPIHomeSecurity/arpi_webapplication](https://github.com/ArPIHomeSecurity/arpi_webapplication).
-
-It is a sub-module of the arpi_management project:
-
-[https://github.com/ArPIHomeSecurity/arpi_management.git](https://github.com/ArPIHomeSecurity/arpi_management.git)
+The source code of the backend system: [arpi_webapplication](https://github.com/ArPIHomeSecurity/arpi_webapplication).
+It is a sub-module of the arpi_management project: [arpi_management](https://github.com/ArPIHomeSecurity/arpi_management.git)
 
 You find how to get the source code [here](index.md#getting-the-code)!
 
