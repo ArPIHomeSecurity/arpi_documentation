@@ -47,9 +47,12 @@ nav:
     - Home: index.md
     - End user:
         - Manual: end_users/index.md
+        - Getting started: end_users/getting_started.md
+        - Advanced options: end_users/advanced_options.md
         - Register: end_users/register.md
         - Login: end_users/login.md
         - Events: end_users/events.md
+        - Simulator: end_users/simulator.md
         - Glossary: end_users/glossary.md
 
         # Help pages for the application

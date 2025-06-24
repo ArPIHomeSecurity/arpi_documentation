@@ -29,7 +29,14 @@ If a Wiegand keypad is attached to the system users can register their RFID card
 You can add an SSH key to the user, so the user can access the system via SSH using the key.
 Without the key, the user can access on SSH only with the password.
 
-See the [Network terminal access](network.md#terminal-access) section.
+When adding a new SSH key you can select from two options:
+
+- **Generate**: A new SSH key pair is generated, and the public key is added to the user. You can copy the private key to your device.
+- **Custom**: You can paste your public SSH key in the text area.
+
+See the [Network terminal access](network.md#terminal-access) section for configuring SSH access to the ArPI Home Security system.
+
+See [SSH key management](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Public_Key_Authentication){:target="_blank"}
 
 ## Edit user
 

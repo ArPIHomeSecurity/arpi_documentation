@@ -14,7 +14,7 @@ Accepted registration code formats:
 * abcdef123
 
 !!! info
-    Default registration code of admin: ABCD1234
+    Default registration code of admin: 'ABCD1234'.
 
 Administrators can [generate registration codes](../end_users/users.md#device-registration).
 

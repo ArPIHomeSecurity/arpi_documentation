@@ -41,3 +41,12 @@ connected solution while preserving existing wiring and sensors.
 - **Network Connection** - Ethernet or WiFi for remote access
 - **Power Supply** - 5V 3A adapter with optional battery backup
 - **Enclosure** - Weather-resistant housing for outdoor installations
+
+
+## No ArPI Board, No Problem!
+
+If you don't have the ArPI interface board, you can still use the software with a Raspberry Pi.
+The simulator mode allows you to test the system without any external hardware.
+You can control channels, power input, and keypad inputs through a simple JSON interface.
+
+For more details on how to use the simulator, see the [Simulator](end_users/simulator.md) documentation.
