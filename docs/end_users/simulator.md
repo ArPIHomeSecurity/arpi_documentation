@@ -25,33 +25,73 @@ The ArPI simulator allows you to test your home security system without physical
 
 ## Configure WiFi
 
-Since ArPI runs headless (no monitor), you need to configure WiFi before first boot:
+Since ArPI runs headless (no monitor), you need to configure WiFi before first boot on the SD card 
+after flashing the image:
 
-1. After flashing, **don't eject** the SD card yet
-2. Open the SD card on your computer (it will appear as "boot")
-3. **Create WiFi configuration** by adding a `wpa_supplicant.conf` file:
-   ```bash
-   # Generate password hash for security
-   wpa_passphrase "YourWiFiName" "YourWiFiPassword" > wpa_supplicant.conf
-   
-   # Edit the file to add country code
-   nano wpa_supplicant.conf
-   ```
-   Add this line at the top of the file:
-   ```
-   country=US
-   ```
-   The final file should look like:
-   ```
-   country=US
-   ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-   update_config=1
-   
-   network={
-       ssid="YourWiFiName"
-       psk=generated_hash_here
-   }
-   ```
+1. Open the SD card on your computer. 
+    You'll see two partitions:
+    - **boot** partition (visible on all systems)
+    - **rootfs** partition (visible on Linux/macOS)
+2. Create wifi passphrase hash:
+```bash
+$ wpa_passphrase <<YourWiFiName>> <<YourWiFiPassword>>
+network={
+    ssid="YourWiFiName"
+    #psk="YourWiFiPassword"
+    psk=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+}
+```
+Use the `psk` value from the output in the next steps.
+
+### Method 1: NetworkManager
+
+This is the recommended method for configuring WiFi on ArPI.
+
+1. **Create WiFi connection file** in the `rootfs` partition at `/etc/NetworkManager/system-connections/wifi.nmconnection`:
+```
+ini
+[connection]
+id=wifi
+type=wifi
+autoconnect=true
+
+[wifi]
+mode=infrastructure
+ssid=<<YourWiFiName>>
+
+[wifi-security]
+auth-alg=open
+key-mgmt=wpa-psk
+psk=<<YourWiFiPassword>>
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+```
+
+2. **Set permissions** (Linux/macOS only):
+```bash
+sudo chmod 600 /rootfs/etc/NetworkManager/system-connections/wifi.nmconnection
+sudo chown root:root /rootfs/etc/NetworkManager/system-connections/wifi.nmconnection
+```
+
+### Method 2: wpa_supplicant
+
+This is a legacy method, but still works if you prefer it.
+
+```ini
+country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="<<YourWiFiName>>"
+    psk="<<YourWiFiPassword>>"
+}
+```
 
 ## Connect with SSH
 
@@ -67,6 +107,7 @@ Since ArPI runs headless (no monitor), you need to configure WiFi before first b
 !!! tip "Connection Issues?"
     - Ensure your computer and Raspberry Pi are on the same WiFi network
     - Try `ping arpi.local` to test basic connectivity
+    - Verify the connection file was created with correct permissions
 
 ## Enable Simulator Mode
 

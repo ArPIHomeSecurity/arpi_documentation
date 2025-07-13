@@ -4,6 +4,10 @@
 
 Download ready-to-use Raspberry Pi images with ArPI pre-installed from our GitHub releases.
 
+!!! note "What You'll need"
+    - SD card (4GB or larger) + SD Card reader
+    - Basic knowledge of using SSH
+
 ### Quick Installation Steps
 
 1. **Download Image**
@@ -16,14 +20,49 @@ Download ready-to-use Raspberry Pi images with ArPI pre-installed from our GitHu
 
 3. **WiFi Configuration**
 
-      For a headless setup, update the `wpa_supplicant.conf` file on the SD card:
-   ```bash
-   # Generate encrypted WiFi credentials
-   wpa_passphrase "YourSSID" "YourPassword"
-   
-   # Add output to wpa_supplicant.conf
-   sudo nano /rootfs/etc/wpa_supplicant/wpa_supplicant.conf
-   ```
+      There are two methods to configure WiFi for headless operation. You can choose either based on your preference:
+
+      * **Using NetworkManager (recommended)**:
+        
+        Create a WiFi connection file in the `rootfs` partition at `/etc/NetworkManager/system-connections/wifi.nmconnection`:
+        ```ini
+        [connection]
+        id=wifi
+        type=wifi
+        autoconnect=true
+
+        [wifi]
+        mode=infrastructure
+        ssid=YourSSID
+
+        [wifi-security]
+        auth-alg=open
+        key-mgmt=wpa-psk
+        psk=YourPassword
+
+        [ipv4]
+        method=auto
+
+        [ipv6]
+        addr-gen-mode=default
+        method=auto
+        ```
+        Update file permissions:
+        ```bash
+        sudo chmod 600 /rootfs/etc/NetworkManager/system-connections/wifi.nmconnection
+        sudo chown root:root /rootfs/etc/NetworkManager/system-connections/wifi.nmconnection
+        ```
+
+      * **Legacy method using wpa_supplicant**:
+        
+        ```bash
+        # Generate encrypted WiFi credentials
+        wpa_passphrase "YourSSID" "YourPassword"
+        
+        # Add output to wpa_supplicant.conf
+        sudo nano /rootfs/etc/wpa_supplicant/wpa_supplicant.conf
+        ```
+
 
 4. **System Access**
       - **Web Interface**: https://arpi.local
