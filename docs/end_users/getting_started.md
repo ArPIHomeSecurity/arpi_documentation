@@ -1,7 +1,7 @@
 # Getting Started with ArPI
 
 As a user of the ArPI Home Security System, first you need to set up your Raspberry Pi and install the ArPI software
-from the [installation guide](installation.md).
+from the [software](../security_engineers/installation-sw.md) and [hardware](../security_engineers/installation-hw.md) installation guides.
 
 Once you have the system running, you can start using it by following these steps:
 
@@ -10,12 +10,12 @@ Once you have the system running, you can start using it by following these step
 To access the system, you need to register your devices. This is done by generating a registration code for each device.
 There is a default registration code that is valid for the administrator user: `ABCD1234`.
 
-For more details on how to register devices, see the [Registration](registration.md) section.
+For more details on how to register devices, see the [registration](register.md) section.
 
 ## 2. Accessing the System
 
 Users can access the system through the web interface locally or remotely, but the remote access requires
-some additional setup.
+some additional setup (see: [Network configuration](network.md))
 
 * For local access, try the default address: `http://arpi.local`
 

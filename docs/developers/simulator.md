@@ -14,13 +14,6 @@ The simulator uses a modern TUI (Terminal User Interface) built with the Textual
 
 ## Starting the Simulator
 
-### Prerequisites
-
-The simulator requires the Textual library. Installation differs between environments:
-
-- **Local Development**: get the source code from the repository and run it
-- **Deployed System**: get the ArPI image and run it
-
 ### Running the Simulator
 
 The simulator can run in two different environments with different setups and purposes:
@@ -28,13 +21,14 @@ The simulator can run in two different environments with different setups and pu
 #### Local Development
 
 For local development, you can run the simulator directly from the source code.
+This helps to quickly test changes without needing to deploy them.
 ```bash
 # navigate to the server directory and run the simulator
 pipenv run start-simulator
 ```
 
-For more  details how to use the development environment, see the [Backend](../backend) and
-[Webapplication](../web_application) documentation.
+For more  details how to use the development environment, see the [Backend](backend.md) and
+[Webapplication](web_application.md) documentation.
 
 #### Deployed System
 
@@ -48,6 +42,8 @@ cd /home/argus/server
 # Run the simulator directly
 ./src/simulator.py
 ```
+
+This helps to test changes on a Raspberry PI without the adapter board.
 
 ### User Interface
 

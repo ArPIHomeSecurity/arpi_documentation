@@ -71,6 +71,10 @@ Download ready-to-use Raspberry Pi images with ArPI pre-installed from our GitHu
       - **SSH Access**: `ssh argus@arpi.local`
          - Default password: `Argus.1234`
 
+!!! note
+      In case of lost registration code you can generate a new one via SSH.
+      See: [Restore access](../security_engineers/restore_access.md)
+
 ## Security Hardening (Post-Installation)
 
 !!! warning "Change Default Credentials"
