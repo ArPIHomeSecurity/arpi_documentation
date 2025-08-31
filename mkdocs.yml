@@ -12,6 +12,7 @@ theme:
     features:
         - navigation.tabs
         - navigation.top
+        - content.icon
     logo: assets/argus-eye-30.png
     favicon: assets/argus-eye-16.png
     palette:
@@ -41,6 +42,9 @@ markdown_extensions:
             class: mermaid
             format: !!python/name:pymdownx.superfences.fence_code_format
     - attr_list # for images
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
 
 
 nav:
@@ -49,6 +53,7 @@ nav:
         - Manual: end_users/index.md
         - Getting started: end_users/getting_started.md
         - Advanced options: end_users/advanced_options.md
+        - Locations: end_users/locations.md
         - Register: end_users/register.md
         - Login: end_users/login.md
         - Events: end_users/events.md
