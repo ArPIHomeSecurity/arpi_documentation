@@ -12,17 +12,17 @@ ssh -i arpi_rsa argus@arpi.local
 $ cd server
 
 # list users
-$ ./src/new_registration_code.py
+$ ./src/update_user.py -l
 Users:
 ID: 33774305 = Administrator (admin):
 
 # generate code for the user with id 33774305
-$ ./src/new_registration_code.py -u 33774305
+$ ./src/new_registration_code.py -u 33774305 -r AB12
 User doesn't have registration code
 
 ------------------------------
 Code generated for user (id: 33774305): Administrator
-New registration code: 293ACECEF9FF
+New registration code: AB12
 The code never expires
 ```
 
