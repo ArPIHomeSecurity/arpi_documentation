@@ -12,6 +12,15 @@ You can reuse the following components from the existing system:
 * sensors
 * syren
 
+## Connect the raspberry pi
+
+Connect the Raspberry Pi to the ArPI board with the 40 pin GPIO connector.
+The ArPI board is designed physically to fit under the Raspberry Pi 2 Zero,
+but you can use with other Raspberry Pi models as well.
+
+When connecting to other models make sure the GPIO pins are aligned correctly.
+You can use a 40 pin GPIO extension cable for that with the correct orientation.
+
 ## Connect power supply
 
 You need a 12V 5A power supply preferred with UPS battery backup (SCP-35/50-12 UPS).
