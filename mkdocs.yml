@@ -13,6 +13,7 @@ theme:
         - navigation.tabs
         - navigation.top
         - content.icon
+        - content.tooltips
     logo: assets/argus-eye-30.png
     favicon: assets/argus-eye-16.png
     palette:
@@ -30,22 +31,32 @@ plugins:
   - glightbox
 
 markdown_extensions:
+    - abbr
     - admonition
+    - attr_list # for images
+    - footnotes
+    - md_in_html
+    - pymdownx.blocks.caption
     - codehilite:
         guess_lang: false
     - toc:
         permalink: true
-    - footnotes
+    - pymdownx.tabbed:
+        alternate_style: true
     - pymdownx.superfences:
         custom_fences:
           - name: mermaid
             class: mermaid
             format: !!python/name:pymdownx.superfences.fence_code_format
-    - attr_list # for images
     - pymdownx.emoji:
         emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.snippets:
+        auto_append:
+            - includes/abbreviations.md
 
+watch:
+  - includes
 
 nav:
     - Home: index.md
@@ -77,6 +88,7 @@ nav:
         - Overview: security_engineers/index.md
         - Install software: security_engineers/installation-sw.md
         - Install hardware: security_engineers/installation-hw.md
+        - Install sensors: security_engineers/installation-sensors.md
         - Restore access: security_engineers/restore_access.md
         - Reset database: security_engineers/reset_database.md
         - Generate hash: security_engineers/generate_hash.md

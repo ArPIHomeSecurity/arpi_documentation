@@ -9,6 +9,9 @@
   <dt><strong>Channel</strong></dt>
   <dd>An input of the board for connecting sensors.</dd>
 
+  <dt><strong>EOL resistor</strong></dt>
+  <dd>End Of Line resistor</dd>
+
   <dt><strong>Sensor</strong></dt>
   <dd>Security system components for detecting changes and triggering alerts.</dd>
 
