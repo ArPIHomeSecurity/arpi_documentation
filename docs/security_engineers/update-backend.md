@@ -18,6 +18,8 @@ Run the installer script directly from the ARPI application host:
 curl -sSL https://app.arpi-security.info/install.py | /usr/bin/python3
 ```
 
+You can use the installed tool as well. See [argus-upgrade](argus-commands.md#argus-upgrade)
+
 This command fetches the current installer and executes the default update workflow.
 
 ## Installer Options

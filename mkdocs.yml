@@ -94,6 +94,7 @@ nav:
         - Reset database: security_engineers/reset_database.md
         - Generate hash: security_engineers/generate_hash.md
         - SSH: security_engineers/ssh.md
+        - Argus commands: security_engineers/argus-commands.md
         - System logs: security_engineers/system_logs.md
 
     - Developers:
