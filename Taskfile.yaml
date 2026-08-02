@@ -1,0 +1,22 @@
+
+version: '3'
+
+vars:
+
+tasks:
+
+  create-environment:
+    desc: Create a python virtual environment with pipenv
+    cmds:
+      - pipenv install --dev
+
+  run:
+    description: Serve the documentation locally using MkDocs.
+    cmds:
+      - pipenv run mkdocs serve --livereload -a localhost:4300
+
+  run-mcp:
+    description: Serve the documentation locally using MkDocs with MCP plugin.
+    cmds:
+      - pipenv run mkdocs-mcp
+

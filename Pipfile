@@ -3,6 +3,10 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+serve = "mkdocs serve --livereload -a=localhost:4300"
+serve-mcp = "mkdocs-mcp"
+
 [packages]
 certifi = ">=2023.7.22"
 chardet = "==5.2.0"
@@ -15,6 +19,8 @@ Pygments = "~=2.16"
 requests = "~=2.32"
 
 [dev-packages]
+mkdocs-mcp-plugin = "*"
+pymilvus = {extras = ["milvus_lite"], version = "*"}
 
 [requires]
-python_version = "3.12"
+python_version = "3.14"
