@@ -87,6 +87,7 @@ nav:
     - Security Engineers:
         - Overview: security_engineers/index.md
         - Install software: security_engineers/installation-sw.md
+        - Update backend: security_engineers/update-backend.md
         - Install hardware: security_engineers/installation-hw.md
         - Install sensors: security_engineers/installation-sensors.md
         - Restore access: security_engineers/restore_access.md
