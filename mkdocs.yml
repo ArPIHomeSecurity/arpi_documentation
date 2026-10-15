@@ -29,6 +29,19 @@ extra_javascript:
 plugins:
   - search
   - glightbox
+  - llmstxt:
+      markdown_description: Documentation for the ArPI Home Security System, including end-user, security engineering, and developer guides.
+      sections:
+        Project overview:
+          - index.md
+        End-user guide:
+          - end_users/*.md
+        Security engineering:
+          - security_engineers/*.md
+        Developer documentation:
+          - developers/*.md
+        Project information:
+          - about.md
 
 markdown_extensions:
     - abbr

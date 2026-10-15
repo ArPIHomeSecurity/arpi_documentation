@@ -9,11 +9,11 @@ serve-mcp = "mkdocs-mcp"
 
 [packages]
 certifi = ">=2023.7.22"
-chardet = "==5.2.0"
 click = "~=8.1"
 livereload = "~=2.6"
 mkdocs = "~=1.6.1"
 mkdocs-glightbox = "*"
+mkdocs-llmstxt = "==0.5.1"
 mkdocs-material = "~=9.5"
 Pygments = "~=2.16"
 requests = "~=2.32"

@@ -20,3 +20,7 @@ tasks:
     cmds:
       - pipenv run mkdocs-mcp
 
+  update-requirements:
+    description: Update the requirements file with the latest dependencies.
+    cmds:
+      - pipenv requirements --dev > docs/requirements.txt
